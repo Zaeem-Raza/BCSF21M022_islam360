@@ -55,6 +55,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/privacyLinks" />
 
+
+
+
     <!-- Illustration at the Bottom  pending-->
     <ImageView
         android:id="@+id/bottomIllustration"
@@ -62,10 +65,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:contentDescription="Mosque Illustration"
-        android:src=""
+        android:src="@drawable/background_gradient"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
     <ImageView
         android:id="@+id/img"

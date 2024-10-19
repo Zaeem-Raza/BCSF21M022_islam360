@@ -63,8 +63,8 @@ Managing System UI Insets:
 Handling system UI elements like the status bar and navigation bars using WindowInsetsCompat was complex, especially for edge-to-edge layouts, which required additional padding management for a visually appealing interface.
 
 
-#Future Plans
-##Implement Full Functionality:
+# Future Plans
+## Implement Full Functionality:
 
 We plan to implement Quran and Hadith browsing, including search and bookmark features, alongside full Dua collections. The Qibla direction feature will also integrate real-time location updates for precision.
 Settings and Customization:
@@ -76,5 +76,5 @@ Add notifications for prayer times, Islamic dates, and reminders for daily dua a
 Authentication & User Profiles:
 
 Support user login through social platforms, with personal bookmarks and progress tracking for reading Quran or Hadith.
-#Conclusion
+# Conclusion
 This project is an ongoing effort to create a fully-featured Islamic resource application, combining usability with a rich array of features for users. The current phase emphasizes design and initial navigation, with more features to come in future updates.

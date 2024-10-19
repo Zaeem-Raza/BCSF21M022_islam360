@@ -1,24 +1,36 @@
 package com.example.islam360
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.islam360.databinding.ActivityDirectionBinding
 
 class Direction : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var binding: ActivityDirectionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_direction)
+        binding = ActivityDirectionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
+        // Set up listeners for Skip and Allow buttons
+        binding.skipButton.setOnClickListener {
+            // Redirect to Home screen when Skip is clicked
+            navigateToHome()
+        }
+
+        binding.allowButton.setOnClickListener {
+            // Redirect to Home screen when Allow is clicked
+            navigateToHome()
+        }
     }
 
-
+    // Function to handle navigation to HomeActivity
+    private fun navigateToHome() {
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()  // Optional: Finish Direction activity so it can't be returned to
+    }
 }

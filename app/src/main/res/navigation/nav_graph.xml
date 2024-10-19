@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.islam360.HomeFragment"
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_quran"
@@ -13,11 +17,6 @@
         android:id="@+id/nav_hadith"
         android:name="com.example.islam360.HadithFragment"
         tools:layout="@layout/fragment_hadith" />
-
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.islam360.HomeFragment"
-        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_ibadat"

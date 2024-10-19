@@ -1,12 +1,14 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_quran"
-        android:icon="@drawable/ic_quran1"
+        android:icon="@drawable/ic_quran"
         android:title="Quran" />
     <item
         android:id="@+id/nav_hadith"
         android:icon="@drawable/ic_hadith"
-        android:title="Hadith" />
+        android:title="Hadith"
+        tools:ignore="HardcodedText" />
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"

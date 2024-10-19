@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_quran"
+        android:icon="@drawable/ic_quran1"
+        android:title="Quran" />
+    <item
+        android:id="@+id/nav_hadith"
+        android:icon="@drawable/ic_hadith"
+        android:title="Hadith" />
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_ibadat"
+        android:icon="@drawable/ic_ibadat"
+        android:title="Ibadat" />
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@drawable/ic_more"
+        android:title="More" />
+</menu>

@@ -59,6 +59,17 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="nav_about_us">About Us</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_remove_ads">Remove Ads</string>
+    <string name="nav_whatsapp_support">WhatsApp Support</string>
+    <string name="nav_notifications">Notification</string>
+    <string name="nav_feedback">Feedback</string>
+    <string name="nav_certificates">Certificates</string>
+    <string name="nav_faq">FAQ</string>
+    <string name="nav_share">Share Islam360</string>
+    <string name="nav_follow">Follow us</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

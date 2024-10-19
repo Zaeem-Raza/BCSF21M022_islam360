@@ -17,32 +17,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Set up toolbar
-        setSupportActionBar(binding.toolbar)
-
-        // Set up navigation drawer toggle
-        val toggle = ActionBarDrawerToggle(
-            this, binding.drawerLayout, binding.toolbar,
-            R.string.navigation_drawer_open, R.string.navigation_drawer_close
-        )
-        binding.drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
-
-        // Handle navigation drawer item clicks
-        binding.navView.setNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_profile -> {
-                    // Handle Profile click
-                }
-                R.id.nav_settings -> {
-                    // Handle Settings click
-                }
-                R.id.nav_help -> {
-                    // Handle Help click
-                }
-            }
-            binding.drawerLayout.closeDrawer(GravityCompat.START)
-            true
-        }
+        setSupportActionBar(findViewById(R.id.toolbar))
 
         // Set the default fragment to HomeFragment
         if (savedInstanceState == null) {
@@ -58,6 +33,49 @@ class HomeActivity : AppCompatActivity() {
                 R.id.nav_ibadat -> loadFragment(IbadatFragment())
                 R.id.nav_more -> loadFragment(MoreFragment())
             }
+            true
+        }
+
+        // Set up navigation drawer toggle
+        val toggle = ActionBarDrawerToggle(
+            this, binding.drawerLayout, findViewById(R.id.toolbar),
+            R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        )
+        binding.drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        // Handle navigation drawer item clicks
+        binding.navView.setNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_about_us -> {
+                    // Handle About Us click
+                }
+                R.id.nav_settings -> {
+                    // Handle Settings click
+                }
+                R.id.nav_remove_ads -> {
+                    // Handle Remove Ads click
+                }
+                R.id.nav_whatsapp_support -> {
+                    // Handle WhatsApp Support click
+                }
+                R.id.nav_notifications -> {
+                    // Handle Notifications click
+                }
+                R.id.nav_feedback -> {
+                    // Handle Feedback click
+                }
+                R.id.nav_certificates -> {
+                    // Handle Certificates click
+                }
+                R.id.nav_faq -> {
+                    // Handle FAQ click
+                }
+                R.id.nav_share -> {
+                    // Handle Share Islam360 click
+                }
+            }
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
     }

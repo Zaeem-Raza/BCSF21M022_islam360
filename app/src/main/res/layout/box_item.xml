@@ -6,23 +6,25 @@
     android:gravity="center"
     android:background="@drawable/box_background"
     android:padding="16dp"
-    android:layout_margin="8dp">
+    android:elevation="4dp"
+    android:layout_margin="8dp"
+    android:layout_gravity="center">
 
     <ImageView
-        android:id="@+id/box_icon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:contentDescription="@string/icon"
-        app:tint="@android:color/white" />
+    android:id="@+id/box_icon"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:src="@drawable/ic_launcher_foreground"
+    android:contentDescription="@string/icon"
+    app:tint="@android:color/white" />
 
     <TextView
-        android:id="@+id/box_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sample Text"
-        android:textColor="@android:color/white"
-        android:paddingTop="8dp"
-        android:textSize="16sp"
-        android:gravity="center" />
-</LinearLayout>
+    android:id="@+id/box_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Sample Text"
+    android:textColor="@android:color/white"
+    android:paddingTop="8dp"
+    android:textSize="16sp"
+    android:gravity="center" />
+    </LinearLayout>

@@ -8,27 +8,19 @@
     android:background="@drawable/drawer_header_background"
     android:padding="16dp">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="Not a Member?"
+        android:textColor="@android:color/white" />
+
     <Button
         android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
         android:text="Login"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Not a Member?"
-        android:textColor="@android:color/white"
-        android:paddingTop="8dp"/>
-
-    <Button
-        android:id="@+id/subscribe_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:text="Subscribe"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="8dp"/>
 </LinearLayout>

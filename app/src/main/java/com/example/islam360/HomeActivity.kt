@@ -48,7 +48,7 @@ class HomeActivity : AppCompatActivity() {
         binding.navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_about_us -> {
-                    // Handle About Us click
+                    loadFragment(AboutUsFragment())  // Load About Us Fragment
                 }
                 R.id.nav_settings -> {
                     // Handle Settings click

@@ -5,7 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.islam360.R
+import android.widget.ImageView
+import android.widget.TextView
 
 class HomeFragment : Fragment() {
 
@@ -13,6 +14,23 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        // Set the title for the fragment
+        val fragmentTitle = view.findViewById<TextView>(R.id.fragment_title)
+        fragmentTitle.text = "Home"
+
+        // Set the fragment icon (no icon for home)
+        val fragmentIcon = view.findViewById<ImageView>(R.id.fragment_icon)
+        fragmentIcon.setImageResource(0)  // Hide the icon for HomeFragment
+
+        // Set prayer times programmatically (optional)
+        val prayerTimeNow = view.findViewById<TextView>(R.id.prayer_time_now)
+        prayerTimeNow.text = "Now: DHUHR"
+
+        val upcomingPrayerTime = view.findViewById<TextView>(R.id.prayer_time_upcoming)
+        upcomingPrayerTime.text = "Upcoming: ASR"
+
+        return view
     }
 }

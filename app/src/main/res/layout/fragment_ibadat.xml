@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".IbadatFragment">
 
+
     <!-- Include the common header -->
     <include
         layout="@layout/common_header"
@@ -18,14 +19,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:alignmentMode="alignMargins"
+        android:background="@color/greyish_black"
         android:columnCount="2"
         android:columnOrderPreserved="false"
         android:padding="16dp"
         android:rowCount="3"
         android:rowOrderPreserved="true"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="337dp">
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="365dp">
 
         <!-- Individual box items for Prayer, Fasting, etc. -->
         <include

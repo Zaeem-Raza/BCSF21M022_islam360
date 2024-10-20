@@ -32,6 +32,7 @@ class HomeActivity : AppCompatActivity() {
                 R.id.nav_hadith -> loadFragment(HadithFragment())
                 R.id.nav_ibadat -> loadFragment(IbadatFragment())
                 R.id.nav_more -> loadFragment(MoreFragment())
+                else -> loadFragment(NotFoundFragment()) // If the item is not found
             }
             true
         }
@@ -48,32 +49,33 @@ class HomeActivity : AppCompatActivity() {
         binding.navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_about_us -> {
-                    loadFragment(AboutUsFragment())  // Load About Us Fragment
+                    loadFragment(AboutUsFragment())  // Implemented
                 }
                 R.id.nav_settings -> {
-                    // Handle Settings click
+                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
                 }
                 R.id.nav_remove_ads -> {
-                    // Handle Remove Ads click
+                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
                 }
                 R.id.nav_whatsapp_support -> {
-                    // Handle WhatsApp Support click
+                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
                 }
                 R.id.nav_notifications -> {
-                    // Handle Notifications click
+                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
                 }
                 R.id.nav_feedback -> {
-                    // Handle Feedback click
+                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
                 }
                 R.id.nav_certificates -> {
-                    // Handle Certificates click
+                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
                 }
                 R.id.nav_faq -> {
-                    // Handle FAQ click
+                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
                 }
                 R.id.nav_share -> {
-                    // Handle Share Islam360 click
+                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
                 }
+                else -> loadFragment(NotFoundFragment())  // Default to 404 for unhandled cases
             }
             binding.drawerLayout.closeDrawer(GravityCompat.START)
             true

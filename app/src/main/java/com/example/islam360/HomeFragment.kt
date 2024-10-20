@@ -20,9 +20,9 @@ class HomeFragment : Fragment() {
         val fragmentTitle = view.findViewById<TextView>(R.id.fragment_title)
         fragmentTitle.text = "Home"
 
-        // Set the fragment icon (no icon for home)
+        // Set the fragment icon to Home
         val fragmentIcon = view.findViewById<ImageView>(R.id.fragment_icon)
-        fragmentIcon.setImageResource(0)  // Hide the icon for HomeFragment
+        fragmentIcon.visibility = View.GONE  // No icon for home
 
         // Set prayer times programmatically (optional)
         val prayerTimeNow = view.findViewById<TextView>(R.id.prayer_time_now)

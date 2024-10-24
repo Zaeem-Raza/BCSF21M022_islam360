@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyish_black"
+    tools:context=".AboutUsFragment">
+
+    <!-- ITM Logo -->
+    <ImageView
+        android:id="@+id/itm_logo"
+        android:layout_width="315dp"
+        android:layout_height="278dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_ibadat"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- About Us Title -->
+    <TextView
+        android:id="@+id/about_us_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Islamic Technology Mission"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/itm_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- About Us Description -->
+    <TextView
+        android:id="@+id/about_us_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Islamic Technology Mission (ITM) is the solution-based IT company which was established in Mid-2011. The core objective of ITM is to spread the Islamic knowledge using information technology. ITM created the world’s first Quran and Hadees search engine named as Islam360. Up till now Islam360 has got 11.6 million plus downloads in 233 countries. Islam360 is available on all platforms including iOS, Android and Huawei. This project is approved by well-known scholars and institutes of Pakistan and Saudi Arabia."
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/about_us_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Email Text -->
+    <TextView
+        android:id="@+id/email_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: islam360helpcenter@gmail.com"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/about_us_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Email Us Button -->
+    <Button
+        android:id="@+id/email_button"
+        style="@style/GreenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Us"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/email_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

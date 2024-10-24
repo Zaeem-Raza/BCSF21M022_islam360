@@ -12,6 +12,7 @@
         android:layout_height="wrap_content" />
 
     <!-- GridLayout for QuranFragment items -->
+    <!--implemented-->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="400dp"

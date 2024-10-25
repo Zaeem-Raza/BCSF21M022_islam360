@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.example.islam360.databinding.ActivityHomeBinding
+import com.example.islam360.ui.RemoveAdsFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -47,36 +48,15 @@ class HomeActivity : AppCompatActivity() {
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        // Handle navigation drawer item clicks
         binding.navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_about_us -> {
                     loadFragment(AboutUsFragment())  // Implemented
                 }
-                R.id.nav_settings -> {
-                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
-                }
                 R.id.nav_remove_ads -> {
-                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
+                    loadFragment(RemoveAdsFragment())  // Load Remove Ads Fragment
                 }
-                R.id.nav_whatsapp_support -> {
-                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
-                }
-                R.id.nav_notifications -> {
-                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
-                }
-                R.id.nav_feedback -> {
-                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
-                }
-                R.id.nav_certificates -> {
-                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
-                }
-                R.id.nav_faq -> {
-                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
-                }
-                R.id.nav_share -> {
-                    loadFragment(NotFoundFragment())  // Not yet implemented, show 404
-                }
+                // Handle other cases...
                 else -> loadFragment(NotFoundFragment())  // Default to 404 for unhandled cases
             }
             binding.drawerLayout.closeDrawer(GravityCompat.START)

@@ -10,6 +10,7 @@
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="greyish_black">#2C2C2C</color>
     <color name="red">#FF0000</color>
+    <color name="green">#4CAF50</color>
     <color name="buttonPrimary">#4CAF50</color> <!-- Example green color for the primary button -->
     <color name="buttonSecondary">#9C27B0</color> <!-- Example purple color for the secondary button -->
     <color name="black_overlay">#66000000</color> <!-- Ensure this color is defined -->

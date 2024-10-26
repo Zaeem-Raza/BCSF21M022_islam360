@@ -19,8 +19,9 @@
         android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
         android:text="Login"
-        android:textColor="@android:color/black" />
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button" />
 
 </LinearLayout>

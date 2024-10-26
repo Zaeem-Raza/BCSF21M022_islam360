@@ -56,6 +56,7 @@ class HomeActivity : AppCompatActivity() {
                 R.id.nav_remove_ads -> {
                     loadFragment(RemoveAdsFragment())  // Load Remove Ads Fragment
                 }
+
                 // Handle other cases...
                 else -> loadFragment(NotFoundFragment())  // Default to 404 for unhandled cases
             }
@@ -64,10 +65,10 @@ class HomeActivity : AppCompatActivity() {
         }
 
         // Set up the Login button in the header
-        binding.navView.getHeaderView(0).findViewById<Button>(R.id.login_button).setOnClickListener {
-            // Start the LoginActivity
-            startActivity(Intent(this, Login::class.java))
-        }
+//        binding.navView.getHeaderView(0).findViewById<Button>(R.id.login_button).setOnClickListener {
+//            // Start the LoginActivity
+//            startActivity(Intent(this, Login::class.java))
+//        }
     }
 
     // Function to load the selected fragment

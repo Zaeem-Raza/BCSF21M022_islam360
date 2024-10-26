@@ -26,5 +26,18 @@
     <fragment
         android:id="@+id/nav_more"
         android:name="com.example.islam360.MoreFragment"
-        tools:layout="@layout/fragment_more" />
+        tools:layout="@layout/fragment_more">
+
+        <!-- Action to navigate from MoreFragment to ShahadahFragment -->
+<!--        <action-->
+<!--            android:id="@+id/action_moreFragment_to_shahadahFragment"-->
+<!--            app:destination="@id/shahadahFragment" />-->
+    </fragment>
+
+    <!-- ShahadahFragment definition -->
+    <fragment
+        android:id="@+id/shahadahFragment"
+        android:name="com.example.islam360.ShahadahFragment"
+        tools:layout="@layout/fragment_shahadah" />
+
 </navigation>

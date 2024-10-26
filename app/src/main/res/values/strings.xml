@@ -10,6 +10,9 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="remove_ads_image">Remove Ads Image</string>
+    <string name="tasbeeh_icon">Tasbeeh Icon</string>
+    <string name="plus_icon">Plus Icon</string>
+    <string name="reset_icon">Reset Icon</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

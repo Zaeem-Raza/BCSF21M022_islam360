@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 class MoreFragment : Fragment() {
 
@@ -24,7 +25,13 @@ class MoreFragment : Fragment() {
         val iconImageView: ImageView = view.findViewById(R.id.fragment_icon)
         iconImageView.setImageResource(R.drawable.ic_more) // Replace with the actual drawable resource
 
+        // Find the Shahadah card and set a click listener
+        val shahadahCard: View = view.findViewById(R.id.card_shahadah)
+//        shahadahCard.setOnClickListener {
+//            // Navigate to ShahadahFragment
+//            findNavController().navigate(R.id.action_moreFragment_to_shahadahFragment)
+//        }
+
         return view
     }
 }
-

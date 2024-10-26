@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_gradient"
+        android:padding="16dp">
+
+        <!-- Prayer Name (Replace with specific prayer names for each card instance) -->
+        <TextView
+            android:id="@+id/prayer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAJR"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat_bold" />
+
+        <!-- Prayer Time (Replace with specific times for each card instance) -->
+        <TextView
+            android:id="@+id/prayer_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="04:52 am"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat_regular" />
+
+        <!-- Mute Icon -->
+        <ImageView
+            android:id="@+id/mute_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_below="@id/prayer_time"
+            android:src="@drawable/ic_mute"
+            app:tint="@android:color/white" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

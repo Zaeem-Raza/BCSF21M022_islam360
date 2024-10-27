@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, Direction::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }, 3000)
     }

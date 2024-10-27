@@ -64,11 +64,11 @@ class HomeActivity : AppCompatActivity() {
             true
         }
 
-        // Set up the Login button in the header
-//        binding.navView.getHeaderView(0).findViewById<Button>(R.id.login_button).setOnClickListener {
-//            // Start the LoginActivity
-//            startActivity(Intent(this, Login::class.java))
-//        }
+         //Set up the Login button in the header
+        binding.navView.getHeaderView(0).findViewById<Button>(R.id.login_button).setOnClickListener {
+           // Start the LoginActivity
+           startActivity(Intent(this, Login::class.java))
+        }
     }
 
     // Function to load the selected fragment

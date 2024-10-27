@@ -12,8 +12,8 @@ class Direction : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityDirectionBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+      //  binding = ActivityDirectionBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_direction)
 
         // Set up listeners for Skip and Allow buttons
         binding.skipButton.setOnClickListener {

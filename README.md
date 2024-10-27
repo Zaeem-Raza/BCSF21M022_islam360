@@ -46,16 +46,25 @@ Follow these steps to set up and run the project:
    - **Purpose**: Provides users with options to log in via **Facebook** or **Gmail** and showcases the app’s features. User authentication will be fully implemented in future versions.
 
 5. **Quran Screen (Fragment)**
-   - **Purpose**: Allows users to browse the Quran, with plans to include features like **search** and **bookmark** functionality for specific verses.
+   - **Purpose**: Allows users to browse the Quran, with features like **Surah cards** and **Ayat cards** to organize and view verses. Future updates will include search and bookmark functionality.
 
-6. **Ibadat Screen (Fragment)**
-   - **Purpose**: Offers a collection of **Duas** and **Supplications** for daily life, enabling users to access spiritual resources easily.
+6. **Hadith Screen (Fragment)**
+   - **Purpose**: Displays collections of Hadiths organized in an accessible format. This screen is designed to allow future addition of search and bookmarking features.
 
-7. **About Us Screen (Fragment)**
-   - **Purpose**: Provides information about the application’s purpose, vision, and future updates.
+7. **Tasbih Screen (Fragment)**
+   - **Purpose**: A digital tasbih counter to help users keep track of their zikr (remembrance) with options to increment and reset the count.
 
-8. **More Screen (Fragment)**
-   - **Purpose**: A section where users can find additional resources and options within the app.
+8. **Prayer Time Screen (Fragment)**
+   - **Purpose**: Displays daily prayer times for Fajr, Dhuhr, Asr, Maghrib, and Isha, as well as supplementary information like **Sunrise**, **Zawal**, and **Sunset** times.
+
+9. **Shahada Screen (Fragment)**
+   - **Purpose**: Presents the Shahada (declaration of faith) in Arabic along with an English translation for users to read and reflect on.
+
+10. **About Us Screen (Fragment)**
+    - **Purpose**: Provides information about the application’s purpose, vision, and future updates.
+
+11. **More Screen (Fragment)**
+    - **Purpose**: A section where users can find additional resources and options within the app.
 
 ### Navigation Bar and Drawer
 The app includes a **bottom navigation bar** and a **navigation drawer** for seamless navigation:
@@ -100,3 +109,4 @@ The app includes a **bottom navigation bar** and a **navigation drawer** for sea
 ## Conclusion
 
 This project is an ongoing effort to create a fully-featured Islamic resource application, balancing usability with a rich array of features. The current phase emphasizes design and navigation, with further functionality to be added in future updates.
+

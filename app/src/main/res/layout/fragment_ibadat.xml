@@ -17,8 +17,8 @@
     <!-- GridLayout for Ibadat items -->
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_margin="10dp"
+        android:layout_height="@dimen/_350sdp"
+        android:layout_margin="@dimen/_7sdp"
         android:columnCount="2"
         android:rowCount="3"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,9 +33,9 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
+            android:layout_margin="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_3sdp"
             android:layout_gravity="fill">
 
             <LinearLayout
@@ -44,20 +44,20 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/box_background"
-                android:padding="10dp">
+                android:padding="@dimen/_7sdp">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
                     app:tint="@android:color/white"
                     android:src="@drawable/ic_prayer" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:text="Prayer"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_14ssp"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -70,9 +70,9 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
+            android:layout_margin="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="@dimen/_3sdp"
             android:layout_gravity="fill">
 
             <LinearLayout
@@ -81,20 +81,20 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/box_background"
-                android:padding="10dp">
+                android:padding="@dimen/_7sdp">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
                     app:tint="@android:color/white"
                     android:src="@drawable/fasting" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:text="Fasting"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_14ssp"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -104,9 +104,9 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
+            android:layout_margin="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="@dimen/_3sdp"
             android:layout_gravity="fill">
 
             <LinearLayout
@@ -115,11 +115,11 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/box_background"
-                android:padding="10dp">
+                android:padding="@dimen/_7sdp">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
                     app:tint="@android:color/white"
                     android:src="@drawable/ic_hajj" />
 
@@ -128,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="Hajj"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_14ssp"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -138,9 +138,9 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
+            android:layout_margin="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="@dimen/_3sdp"
             android:layout_gravity="fill">
 
             <LinearLayout
@@ -149,11 +149,11 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/box_background"
-                android:padding="10dp">
+                android:padding="@dimen/_7sdp">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
                     app:tint="@android:color/white"
                     android:src="@drawable/ic_umrah" />
 
@@ -162,7 +162,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="Umrah"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_14ssp"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -172,9 +172,9 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
+            android:layout_margin="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="@dimen/_3sdp"
             android:layout_gravity="fill">
 
             <LinearLayout
@@ -183,11 +183,11 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/box_background"
-                android:padding="10dp">
+                android:padding="@dimen/_7sdp">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
                     app:tint="@android:color/white"
                     android:src="@drawable/ic_janaza" />
 
@@ -196,7 +196,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="Namaz e Janaza"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_14ssp"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

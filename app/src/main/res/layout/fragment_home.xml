@@ -10,7 +10,7 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="@dimen/_6sdp">
 
             <include
                 android:id="@+id/common_header"
@@ -30,16 +30,16 @@
                 android:id="@+id/random_ayat_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
+                android:layout_margin="@dimen/_6sdp"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="@dimen/_3sdp"
                 android:backgroundTint="@color/greyish_black">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="@dimen/_12sdp">
 
                     <TextView
                         android:id="@+id/random_ayat_text"
@@ -47,7 +47,7 @@
                         android:layout_height="wrap_content"
                         android:text="قُلْ هُوَ ٱللَّهُ أَحَدٌ"
                         android:textColor="@android:color/white"
-                        android:textSize="20sp"
+                        android:textSize="@dimen/_17ssp"
                         android:textStyle="bold"
                         android:fontFamily="@font/montserrat_bold" />
 
@@ -57,8 +57,8 @@
                         android:layout_height="wrap_content"
                         android:text="Say, 'He is Allah, [who is] One.'"
                         android:textColor="@android:color/white"
-                        android:textSize="16sp"
-                        android:layout_marginTop="4dp"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginTop="@dimen/_3ssp"
                         android:fontFamily="@font/montserrat_regular" />
 
                     <TextView
@@ -67,8 +67,8 @@
                         android:layout_height="wrap_content"
                         android:text="Surah Al-Ikhlas, Ayat 1"
                         android:textColor="@android:color/white"
-                        android:textSize="14sp"
-                        android:layout_marginTop="4dp"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_3sdp"
                         android:textStyle="italic"
                         android:fontFamily="@font/montserrat_regular" />
                 </LinearLayout>
@@ -76,35 +76,33 @@
 
             <ImageView
                 android:id="@+id/support_us_image"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/support_us"
-                android:layout_marginTop="8dp" />
+                android:src="@drawable/support_us" />
 
             <ImageView
                 android:id="@+id/precious_gift_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/gift_image"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="@dimen/_6sdp" />
 
             <HorizontalScrollView
                 android:id="@+id/horizontal_scroll_cards"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_horizontal"
-                    android:padding="4dp">
+                    android:padding="@dimen/_3sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
+                        android:layout_margin="@dimen/_6sdp"
                         app:cardBackgroundColor="@color/greyish_black">
 
                         <LinearLayout
@@ -114,8 +112,8 @@
                             android:gravity="center">
 
                             <ImageView
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
+                                android:layout_width="@dimen/_36sdp"
+                                android:layout_height="@dimen/_36sdp"
                                 android:src="@drawable/ic_flash"
                                 app:tint="@color/red" />
 
@@ -124,15 +122,15 @@
                                 android:layout_height="wrap_content"
                                 android:text="Flashes"
                                 android:textColor="@color/red"
-                                android:textSize="14sp"
-                                android:layout_marginTop="4dp" />
+                                android:textSize="@dimen/_10ssp"
+                                android:layout_marginTop="@dimen/_3sdp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
+                        android:layout_margin="@dimen/_6sdp"
                         app:cardBackgroundColor="@color/greyish_black">
 
                         <LinearLayout
@@ -142,8 +140,8 @@
                             android:gravity="center">
 
                             <ImageView
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
+                                android:layout_width="@dimen/_36sdp"
+                                android:layout_height="@dimen/_36sdp"
                                 android:src="@drawable/ic_dua"
                                 app:tint="@color/red" />
 
@@ -152,15 +150,15 @@
                                 android:layout_height="wrap_content"
                                 android:text="Supplication"
                                 android:textColor="@color/red"
-                                android:textSize="14sp"
-                                android:layout_marginTop="4dp" />
+                                android:textSize="@dimen/_10ssp"
+                                android:layout_marginTop="@dimen/_3sdp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
+                        android:layout_margin="@dimen/_6sdp"
                         app:cardBackgroundColor="@color/greyish_black">
 
                         <LinearLayout
@@ -170,8 +168,8 @@
                             android:gravity="center">
 
                             <ImageView
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
+                                android:layout_width="@dimen/_36sdp"
+                                android:layout_height="@dimen/_36sdp"
                                 android:src="@drawable/ic_shahada"
                                 app:tint="@color/red" />
 
@@ -180,15 +178,15 @@
                                 android:layout_height="wrap_content"
                                 android:text="Shahada"
                                 android:textColor="@color/red"
-                                android:textSize="14sp"
-                                android:layout_marginTop="4dp" />
+                                android:textSize="@dimen/_10ssp"
+                                android:layout_marginTop="@dimen/_3sdp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
+                        android:layout_margin="@dimen/_6sdp"
                         app:cardBackgroundColor="@color/greyish_black">
 
                         <LinearLayout
@@ -198,8 +196,8 @@
                             android:gravity="center">
 
                             <ImageView
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
+                                android:layout_width="@dimen/_36sdp"
+                                android:layout_height="@dimen/_36sdp"
                                 android:src="@drawable/ic_tasbih"
                                 app:tint="@color/red" />
 
@@ -208,8 +206,8 @@
                                 android:layout_height="wrap_content"
                                 android:text="Tasbeeh"
                                 android:textColor="@color/red"
-                                android:textSize="14sp"
-                                android:layout_marginTop="4dp" />
+                                android:textSize="@dimen/_10ssp"
+                                android:layout_marginTop="@dimen/_3sdp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -220,7 +218,7 @@
                 android:id="@+id/video_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/_6sdp"
                 app:cardBackgroundColor="@color/greyish_black">
 
                 <LinearLayout
@@ -229,17 +227,17 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
                         android:src="@drawable/video_thumbnail"
-                        android:layout_margin="8dp" />
+                        android:layout_margin="@dimen/_6sdp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Umrah Guidance\nUmrah is an Islamic pilgrimage...\nMore details here."
-                        android:textSize="14sp"
-                        android:layout_margin="8dp"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_margin="@dimen/_6sdp"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -249,7 +247,7 @@
                 android:id="@+id/hajj_guidance_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/_6sdp"
                 app:cardBackgroundColor="@color/greyish_black">
 
                 <LinearLayout
@@ -258,8 +256,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
                         android:src="@drawable/hajj_image"
                         android:layout_margin="8dp" />
 
@@ -267,8 +265,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Hajj Guidance\nHajj is one of the fundamental pillars of Islam, an annual spiritual experience undertaken by Muslims at least once in their lifetime to express their faith in and servitude towards Allah."
-                        android:textSize="14sp"
-                        android:layout_margin="8dp"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_margin="@dimen/_6sdp"
                         android:textColor="@color/white" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -277,7 +275,7 @@
                 android:id="@+id/allah_name_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/_6sdp"
                 app:cardBackgroundColor="@color/greyish_black">
 
                 <LinearLayout
@@ -286,17 +284,17 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
                         android:src="@drawable/allah_name_image"
-                        android:layout_margin="8dp" />
+                        android:layout_margin="@dimen/_6sdp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Al-Malik\nThe Sovereign Lord, The One with the complete Dominion."
-                        android:textSize="14sp"
-                        android:layout_margin="8dp"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_margin="@dimen/_6sdp"
                         android:textColor="@color/white" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -306,13 +304,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/religion"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="@dimen/_6sdp" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/flashes_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/_6sdp"
                 app:cardBackgroundColor="@color/greyish_black">
 
                 <LinearLayout
@@ -326,8 +324,8 @@
                         android:layout_height="wrap_content"
                         android:text="Flashes"
                         android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:layout_margin="8dp"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_margin="@dimen/_6sdp"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -335,7 +333,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/flash_image"
-                        android:layout_marginTop="8dp" />
+                        android:layout_marginTop="@dimen/_6sdp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

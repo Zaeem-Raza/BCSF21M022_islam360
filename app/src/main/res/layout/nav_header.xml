@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="@dimen/_150sdp"
     android:background="@drawable/blue_purple_gradient"
     tools:context=".YourActivity">
 
@@ -16,10 +16,10 @@
         android:text="Login"
         android:textColor="@android:color/white"
         android:background="@drawable/rounded_button"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -30,12 +30,12 @@
         android:layout_height="wrap_content"
         android:text="Not a Member?"
         android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_6sdp"
         app:layout_constraintTop_toBottomOf="@id/login_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

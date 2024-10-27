@@ -6,12 +6,12 @@
     android:gravity="center_vertical"
     android:orientation="vertical"
     android:background="@drawable/drawer_header_background"
-    android:padding="16dp">
+    android:padding="@dimen/_12sdp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
+        android:paddingTop="@dimen/_6sdp"
         android:text="Not a Member?"
         android:textColor="@android:color/white" />
 

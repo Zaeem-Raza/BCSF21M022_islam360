@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:background="@drawable/background_gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Arabic Text -->
+        <TextView
+            android:id="@+id/surah_arabic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الفاتحة"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_green_light"
+            android:fontFamily="@font/al_qalam" />
+
+        <!-- English Name and Verses Count -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/surah_arabic"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/surah_english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surat-ul-Fateha"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/montserrat_bold" />
+
+            <TextView
+                android:id="@+id/verse_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verses 7"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/montserrat_regular" />
+        </LinearLayout>
+
+<!--        &lt;!&ndash; Favorite Icon &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/favorite_icon"-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:src="@drawable/ic_favorite"-->
+<!--            app:tint="@android:color/holo_red_light"-->
+<!--            android:contentDescription="@string/favorite" />-->
+
+<!--        &lt;!&ndash; Download Icon &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/download_icon"-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:layout_below="@id/favorite_icon"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:src="@drawable/ic_download"-->
+<!--            app:tint="@android:color/white"-->
+<!--            android:contentDescription="@string/download" />-->
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

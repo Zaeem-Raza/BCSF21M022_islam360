@@ -5,15 +5,15 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/box_background"
-    android:padding="16dp"
-    android:elevation="4dp"
-    android:layout_margin="8dp"
+    android:padding="@dimen/_12sdp"
+    android:elevation="@dimen/_3sdp"
+    android:layout_margin="@dimen/_6sdp"
     android:layout_gravity="center">
 
     <ImageView
     android:id="@+id/box_icon"
-    android:layout_width="48dp"
-    android:layout_height="48dp"
+    android:layout_width="@dimen/_34sdp"
+    android:layout_height="@dimen/_34sdp"
     android:src="@drawable/ic_launcher_foreground"
     android:contentDescription="@string/icon"
     app:tint="@android:color/white" />
@@ -24,7 +24,7 @@
     android:layout_height="wrap_content"
     android:text="Sample Text"
     android:textColor="@android:color/white"
-    android:paddingTop="8dp"
-    android:textSize="16sp"
+    android:paddingTop="@dimen/_5sdp"
+    android:textSize="@dimen/_12sdp"
     android:gravity="center" />
     </LinearLayout>

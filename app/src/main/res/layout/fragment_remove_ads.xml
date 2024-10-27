@@ -17,16 +17,16 @@
             android:layout_height="wrap_content"
             android:text="Become a Ads free User of Islam360"
             android:textColor="@android:color/white"
-            android:textSize="22sp"
-            android:layout_marginTop="24dp"
+            android:textSize="@dimen/_19ssp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:fontFamily="@font/montserrat_bold" />
 
         <!-- Image -->
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
             android:src="@drawable/ic_ads_free_image"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_12sdp"
             android:contentDescription="@string/remove_ads_image" />
 
         <!-- Description Text -->
@@ -35,11 +35,11 @@
             android:layout_height="wrap_content"
             android:text="Tired of seeing ads while using our app? Upgrade to premium and enjoy an ad-free experience today!"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:layout_marginTop="16dp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
             android:gravity="center"
             android:fontFamily="@font/montserrat_regular"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="@dimen/_12sdp" />
 
         <!-- Best Offer Section -->
         <TextView
@@ -47,8 +47,8 @@
             android:layout_height="wrap_content"
             android:text="Best Offer"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:layout_marginTop="8dp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_6sdp"
             android:fontFamily="@font/montserrat_bold" />
 
         <TextView
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:text="PKR 11,000"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
+            android:textSize="@dimen/_20ssp"
             android:fontFamily="@font/montserrat_bold" />
 
         <TextView
@@ -64,9 +64,9 @@
             android:layout_height="wrap_content"
             android:text="3-Years Pro"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
+            android:textSize="@dimen/_12ssp"
             android:fontFamily="@font/montserrat_regular"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="@dimen/_12sdp" />
 
         <!-- Subscription Options -->
         <LinearLayout
@@ -74,14 +74,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="@dimen/_6sdp">
 
             <!-- Monthly Plan -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Monthly"
-                android:padding="8dp"
+                android:padding="@dimen/_6sdp"
                 android:gravity="center"
                 android:background="@drawable/rounded_button"
                 android:textColor="@android:color/black"
@@ -92,10 +92,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Semi Annually"
-                android:padding="8dp"
+                android:padding="@dimen/_6sdp"
                 android:gravity="center"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
                 android:background="@drawable/rounded_button"
                 android:textColor="@android:color/black"
             android:fontFamily="@font/montserrat_regular" />
@@ -105,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Annually"
-                android:padding="8dp"
+                android:padding="@dimen/_6sdp"
                 android:gravity="center"
                 android:background="@drawable/rounded_button"
                 android:textColor="@android:color/black"
@@ -117,18 +117,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Subscribe"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textColor="@android:color/white"
             android:backgroundTint="@color/buttonPrimary"
             android:fontFamily="@font/montserrat_bold"
-            android:layout_marginTop="24dp" />
+            android:layout_marginTop="@dimen/_20sdp" />
 
         <!-- Restore Purchase Button -->
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Restore Purchase"
-            android:textSize="18sp"
+            android:textSize="@dimen/_14ssp"
             android:textColor="@android:color/white"
             android:backgroundTint="@color/buttonSecondary"
             android:fontFamily="@font/montserrat_bold"
@@ -139,12 +139,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="By subscribing you also agreed to our Terms Of Use and Privacy Policy"
-            android:textSize="12sp"
+            android:textSize="@dimen/_9ssp"
             android:textColor="@android:color/white"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_12sdp"
             android:gravity="center"
             android:fontFamily="@font/montserrat_regular"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="@dimen/_20sdp" />
 
     </LinearLayout>
 </ScrollView>

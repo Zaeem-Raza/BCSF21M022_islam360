@@ -1,5 +1,6 @@
 package com.example.islam360
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,10 +28,16 @@ class MoreFragment : Fragment() {
 
         // Find the Shahadah card and set a click listener
         val shahadahCard: View = view.findViewById(R.id.card_shahadah)
-//        shahadahCard.setOnClickListener {
-//            // Navigate to ShahadahFragment
-//            findNavController().navigate(R.id.action_moreFragment_to_shahadahFragment)
-//        }
+        shahadahCard.setOnClickListener {
+            // Ensure this matches the action ID in the navigation graph
+            startActivity(Intent(requireContext(), Shahadah::class.java))
+        }
+
+        val prayerCard: View = view.findViewById(R.id.card_prayer_time)
+        prayerCard.setOnClickListener {
+            // Navigate to PrayerTime
+            startActivity(Intent(requireContext(), PrayerTime::class.java))
+        }
 
         return view
     }

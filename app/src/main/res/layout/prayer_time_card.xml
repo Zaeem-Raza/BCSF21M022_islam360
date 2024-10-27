@@ -3,16 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="4dp"
+    android:layout_margin="@dimen/_6sdp"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:cardElevation="@dimen/_3sdp"
     android:background="@android:color/transparent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_gradient"
-        android:padding="16dp">
+        android:padding="@dimen/_12sdp">
 
         <!-- Prayer Name (Replace with specific prayer names for each card instance) -->
         <TextView
@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="FAJR"
-            android:textSize="20sp"
+            android:textSize="@dimen/_17ssp"
             android:textColor="@android:color/white"
             android:fontFamily="@font/montserrat_bold" />
 
@@ -31,17 +31,17 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:text="04:52 am"
-            android:textSize="20sp"
+            android:textSize="@dimen/_17ssp"
             android:textColor="@android:color/white"
             android:fontFamily="@font/montserrat_regular" />
 
         <!-- Mute Icon -->
         <ImageView
             android:id="@+id/mute_icon"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:layout_below="@id/prayer_time"
             android:src="@drawable/ic_mute"
             app:tint="@android:color/white" />

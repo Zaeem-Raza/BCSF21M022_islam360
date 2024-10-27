@@ -13,10 +13,10 @@
         android:id="@+id/card_arabic_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/_12sdp"
         app:cardBackgroundColor="@color/greyish_black"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_3sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/card_english_translation"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="@dimen/_12sdp"
             android:gravity="center_horizontal">
 
             <TextView
@@ -38,18 +38,18 @@
                 android:text="أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/_20ssp" />
 
             <TextView
                 android:id="@+id/shahadah_text_romanized"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/montserrat_regular"
                 android:text="Ash-hadu Al-laaa Ilaaha Illa-Ilaahu Wahdahoo Laa Shareeka Lahoo Wa-Ash-hadu Anna Muhammadan Abduhoo Wa Rasooluhu"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/_12ssp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -58,10 +58,10 @@
         android:id="@+id/card_english_translation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/_12sdp"
         app:cardBackgroundColor="@color/greyish_black"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_3sdp"
         app:layout_constraintTop_toBottomOf="@id/card_arabic_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="@dimen/_12sdp"
             android:gravity="center_horizontal">
 
             <TextView
@@ -82,19 +82,19 @@
                 android:text="I bear witness!"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="18sp"
+                android:textSize="@dimen/_14ssp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/shahadah_text_english_translation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/_6sdp"
                 android:fontFamily="@font/montserrat_regular"
                 android:text="That no-one is worthy of worship but Allah, the One alone, without partner, and I bear witness That Muhammad is His servant and Messenger."
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/_14ssp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

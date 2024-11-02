@@ -39,12 +39,10 @@ class MoreFragment : Fragment() {
             startActivity(Intent(requireContext(), PrayerTime::class.java))
         }
         val qiblaCard: View = view.findViewById(R.id.card_qibla_direction)
-        prayerCard.setOnClickListener {
+        qiblaCard.setOnClickListener {
             // Navigate to PrayerTime
-            startActivity(Intent(requireContext(), Direcion::class.java))
+            startActivity(Intent(requireContext(), Direction::class.java))
         }
-
-
         return view
     }
 }

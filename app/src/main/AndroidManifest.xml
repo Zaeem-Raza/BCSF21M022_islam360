@@ -13,6 +13,10 @@
         android:theme="@style/Theme.Islam360"
         tools:targetApi="31">
         <activity
+            android:name=".Direction"
+            android:exported="false"
+            android:theme="@style/Theme.Islam360" />
+        <activity
             android:name=".PrayerTime"
             android:exported="false"
             android:theme="@style/Theme.Islam360" />
@@ -21,18 +25,11 @@
             android:exported="false"
             android:theme="@style/Theme.Islam360" />
         <activity
-            android:name=".activity_login"
-            android:exported="false" />
-        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
-        <activity
-            android:name=".Direction"
-            android:exported="false"
-            android:theme="@style/Theme.Islam360" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -26,7 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/_12sdp">
 
             <ImageView
                 android:layout_width="@dimen/_20sdp"
@@ -50,22 +51,38 @@
         </LinearLayout>
 
         <!-- Zawal Section -->
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zawal\n11:37 AM"
+            android:orientation="vertical"
             android:gravity="center"
             android:layout_marginStart="@dimen/_12sdp"
-            android:layout_marginEnd="@dimen/_12sdp"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/_10ssp" />
+            android:layout_marginEnd="@dimen/_12sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zawal"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_10ssp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:37 AM"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_9ssp"
+                android:gravity="center" />
+        </LinearLayout>
 
         <!-- Sunset Section -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_12sdp">
 
             <ImageView
                 android:layout_width="@dimen/_20sdp"
@@ -89,8 +106,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Prayer Time Cards (Static Layout) -->
-    <!-- Prayer Time Cards (Static Layout) -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -100,21 +115,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Fajr Card -->
+        <!-- Prayer Cards with IDs for reference in PrayerTime.kt -->
         <include layout="@layout/prayer_time_card" android:id="@+id/fajr_card"/>
-
-        <!-- Dhuhr Card -->
         <include layout="@layout/prayer_time_card" android:id="@+id/dhuhr_card"/>
-
-        <!-- Asr Card -->
         <include layout="@layout/prayer_time_card" android:id="@+id/asr_card"/>
-
-        <!-- Maghrib Card -->
         <include layout="@layout/prayer_time_card" android:id="@+id/maghrib_card"/>
-
-        <!-- Isha Card -->
         <include layout="@layout/prayer_time_card" android:id="@+id/isha_card"/>
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

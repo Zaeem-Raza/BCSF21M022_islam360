@@ -1,5 +1,6 @@
 package com.example.islam360
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 
 class QuranFragment : Fragment() {
 
@@ -30,6 +32,19 @@ class QuranFragment : Fragment() {
 
         val upcomingPrayerTime = view.findViewById<TextView>(R.id.prayer_time_upcoming)
         upcomingPrayerTime.text = "Upcoming: ASR"
+
+
+//        val qiblaCard: View = view.findViewById(R.id.card_qibla_direction)
+//        qiblaCard.setOnClickListener {
+//            // Navigate to PrayerTime
+//            startActivity(Intent(requireContext(), Direction::class.java))
+//        }
+        val quranBySurah = view.findViewById<CardView>(R.id.alquran)
+        quranBySurah.setOnClickListener {
+
+            val intent = Intent(activity, QuranBySurah::class.java)
+            startActivity(intent)
+        }
 
         return view
     }

@@ -26,19 +26,13 @@ class QuranFragment : Fragment() {
         val fragmentIcon = view.findViewById<ImageView>(R.id.fragment_icon)
         fragmentIcon.setImageResource(R.drawable.ic_quran)
 
-        // Set prayer times programmatically (optional)
+        // Set prayer times programmatically
         val prayerTimeNow = view.findViewById<TextView>(R.id.prayer_time_now)
         prayerTimeNow.text = "Now: DHUHR"
 
         val upcomingPrayerTime = view.findViewById<TextView>(R.id.prayer_time_upcoming)
         upcomingPrayerTime.text = "Upcoming: ASR"
 
-
-//        val qiblaCard: View = view.findViewById(R.id.card_qibla_direction)
-//        qiblaCard.setOnClickListener {
-//            // Navigate to PrayerTime
-//            startActivity(Intent(requireContext(), Direction::class.java))
-//        }
         val quranBySurah = view.findViewById<CardView>(R.id.alquran)
         quranBySurah.setOnClickListener {
 

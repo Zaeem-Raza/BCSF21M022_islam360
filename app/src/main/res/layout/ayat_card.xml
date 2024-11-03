@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="@color/greyish_black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/greyish_black"
+        tools:ignore="ExtraText">
+
+        <!-- Top Options (Translation and Tafseer Tabs) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/translation_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Translation"
+                android:background="@drawable/background_gradient"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular" />
+
+            <TextView
+                android:id="@+id/tafseer_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tafseer"
+                android:background="@drawable/background_gradient_grey"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular" />
+        </LinearLayout>
+
+        <!-- Ayat Arabic Text -->
+        <TextView
+            android:id="@+id/ayat_arabic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:fontFamily="@font/al_qalam"
+            android:layout_below="@id/translation_tab"
+            android:layout_marginTop="8dp"
+            tools:ignore="NotSibling" />
+
+        <!-- Surah and Ayat Number -->
+        <TextView
+            android:id="@+id/ayat_reference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="1:1"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_below="@+id/translation_tab"
+            tools:ignore="NotSibling" />
+
+        <!-- Ayat Translation in Urdu -->
+        <TextView
+            android:id="@+id/ayat_translation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ayat_arabic"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:text="سب تعریف اللہ تعالیٰ کے لئے ہے جو تمام جہانوں کا پالنے والا ہے۔"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:fontFamily="@font/al_qalam" />
+
+        <!-- Bottom Icon (e.g., Speaker Icon for Audio) -->
+        <ImageView
+            android:id="@+id/speaker_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_speaker"
+            app:tint="@android:color/white" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

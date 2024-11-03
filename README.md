@@ -65,6 +65,10 @@ Follow these steps to set up and run the project:
 
 11. **More Screen (Fragment)**
     - **Purpose**: A section where users can find additional resources and options within the app.
+   
+   
+12. **QuranBySurah Screen (Activity)**
+    - **Purpose**: All Quran with surahs
 
 ### Navigation Bar and Drawer
 The app includes a **bottom navigation bar** and a **navigation drawer** for seamless navigation:

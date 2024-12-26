@@ -26,20 +26,42 @@ class HadithFragment : Fragment() {
         val fragmentIcon = view.findViewById<ImageView>(R.id.fragment_icon)
         fragmentIcon.setImageResource(R.drawable.ic_hadith)
 
-        // Set prayer times programmatically (optional)
+        // Set prayer times programmatically
         val prayerTimeNow = view.findViewById<TextView>(R.id.prayer_time_now)
         prayerTimeNow.text = "Now: DHUHR"
 
         val upcomingPrayerTime = view.findViewById<TextView>(R.id.prayer_time_upcoming)
         upcomingPrayerTime.text = "Upcoming: ASR"
 
-
-        val alBukhari = view.findViewById<CardView>(R.id.alBukhari1)
-        alBukhari.setOnClickListener {
-            val intent = Intent(activity, SahihBukhari::class.java)
-            startActivity(intent)
-        }
+        // Set click listeners for all cards
+        setupCardClickListeners(view)
 
         return view
     }
+
+    private fun setupCardClickListeners(view: View) {
+        // List of card IDs and their corresponding collection names
+        val cardData = listOf(
+            CardInfo(R.id.alBukhari1, "Al-Bukhari"),
+            CardInfo(R.id.muslim, "Al-Muslim"),
+            CardInfo(R.id.tirmizi, "Al-Tirmizi"),
+            CardInfo(R.id.abuDawood, "Abu Dawood"),
+            CardInfo(R.id.nasai, "Al-Nasai"),
+            CardInfo(R.id.ibnMaja, "Ibn e Maja"),
+            CardInfo(R.id.silsila, "Al-Silsila"),
+            CardInfo(R.id.musnadAhmad, "Musnad Ahmed")
+        )
+
+        // Set click listener for each card
+        cardData.forEach { cardInfo ->
+            view.findViewById<CardView>(cardInfo.id)?.setOnClickListener {
+                val intent = Intent(activity, SahihBukhari::class.java).apply {
+                    putExtra("COLLECTION_NAME", cardInfo.collectionName)
+                }
+                startActivity(intent)
+            }
+        }
+    }
+
+    private data class CardInfo(val id: Int, val collectionName: String)
 }

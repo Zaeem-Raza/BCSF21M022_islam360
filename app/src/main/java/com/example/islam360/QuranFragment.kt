@@ -33,10 +33,41 @@ class QuranFragment : Fragment() {
         val upcomingPrayerTime = view.findViewById<TextView>(R.id.prayer_time_upcoming)
         upcomingPrayerTime.text = "Upcoming: ASR"
 
+        // Existing click listeners
         val quranBySurah = view.findViewById<CardView>(R.id.alquran)
         quranBySurah.setOnClickListener {
+            val intent = Intent(activity, QuranNext::class.java)
+            startActivity(intent)
+        }
 
-            val intent = Intent(activity, QuranBySurah::class.java)
+        val seeratCard = view.findViewById<CardView>(R.id.seerat_card)
+        seeratCard.setOnClickListener {
+            val intent = Intent(activity, Seerat_un_Nabi::class.java)
+            startActivity(intent)
+        }
+
+        // New click listeners for remaining cards
+        view.findViewById<CardView>(R.id.fifteen_line_quran)?.setOnClickListener {
+            val intent = Intent(activity, QuranNext::class.java)
+            intent.putExtra("mode", "fifteen_line")
+            startActivity(intent)
+        }
+
+        view.findViewById<CardView>(R.id.fahmulquran)?.setOnClickListener {
+            val intent = Intent(activity, QuranNext::class.java)
+            intent.putExtra("mode", "fahm")
+            startActivity(intent)
+        }
+
+        view.findViewById<CardView>(R.id.recitation)?.setOnClickListener {
+            val intent = Intent(activity, QuranNext::class.java)
+            intent.putExtra("mode", "recitation")
+            startActivity(intent)
+        }
+
+        view.findViewById<CardView>(R.id.understandquran)?.setOnClickListener {
+            val intent = Intent(activity, QuranNext::class.java)
+            intent.putExtra("mode", "understand")
             startActivity(intent)
         }
 

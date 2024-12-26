@@ -13,6 +13,20 @@
         android:theme="@style/Theme.Islam360"
         tools:targetApi="31">
         <activity
+            android:name=".QuranNext"
+            android:exported="false"
+            android:theme="@style/Theme.Islam360" />
+        <activity
+            android:name=".Seerat_un_Nabi"
+            android:exported="false"
+            android:theme="@style/Theme.Islam360" />
+        <activity
+            android:name=".seerat_u_nabi"
+            android:exported="false" />
+        <activity
+            android:name=".seerat_un_nabi"
+            android:exported="false" />
+        <activity
             android:name=".surahh"
             android:exported="false" />
         <activity

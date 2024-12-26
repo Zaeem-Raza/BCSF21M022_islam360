@@ -15,4 +15,5 @@
     <color name="buttonSecondary">#9C27B0</color> <!-- Example purple color for the secondary button -->
     <color name="black_overlay">#66000000</color> <!-- Ensure this color is defined -->
     <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFFF00</color>
 </resources>

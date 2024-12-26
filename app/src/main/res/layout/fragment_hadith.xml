@@ -82,6 +82,7 @@
 
         <!-- Card for Al-Muslim -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/muslim"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -129,6 +130,7 @@
 
         <!-- Card for Al-Tirmizi -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/tirmizi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -176,6 +178,7 @@
 
         <!-- Card for Abu Dawood -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/abuDawood"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -223,6 +226,7 @@
 
         <!-- Card for Al-Nasai -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/nasai"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -270,6 +274,7 @@
 
         <!-- Card for Sunnan e Ibn e Maja -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/ibnMaja"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -317,6 +322,7 @@
 
         <!-- Card for Al-Silsila -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/silsila"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -364,6 +370,7 @@
 
         <!-- Card for Musnad Ahmed -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/musnadAhmad"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"

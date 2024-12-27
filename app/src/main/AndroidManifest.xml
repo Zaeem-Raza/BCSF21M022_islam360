@@ -28,12 +28,6 @@
             android:exported="false"
             android:theme="@style/Theme.Islam360" />
         <activity
-            android:name=".seerat_u_nabi"
-            android:exported="false" />
-        <activity
-            android:name=".seerat_un_nabi"
-            android:exported="false" />
-        <activity
             android:name=".surahh"
             android:exported="false" />
         <activity

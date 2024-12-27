@@ -29,7 +29,7 @@ class Signup : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         signIn.setOnClickListener {
-            val intent = Intent(applicationContext, Login::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
             finish()
         }
@@ -40,29 +40,29 @@ class Signup : AppCompatActivity() {
             val passwords = password.text.toString()
 
             if (TextUtils.isEmpty(emails)) {
-                Toast.makeText(this@Signup, "Email cannot be empty", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Email cannot be empty", Toast.LENGTH_SHORT).show()
                 progressBar.visibility = View.GONE
                 return@setOnClickListener
             }
 
             if (TextUtils.isEmpty(passwords)) {
-                Toast.makeText(this@Signup, "Password cannot be empty", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Password cannot be empty", Toast.LENGTH_SHORT).show()
                 progressBar.visibility = View.GONE
                 return@setOnClickListener
             }
 
             mAuth.createUserWithEmailAndPassword(emails, passwords)
-                    .addOnCompleteListener { task ->
+                .addOnCompleteListener { task ->
                     progressBar.visibility = View.GONE
-                if (task.isSuccessful) {
-                    Toast.makeText(this@Signup, "Account Created", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(applicationContext, Login::class.java)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    Toast.makeText(this@Signup, "Authentication Failed", Toast.LENGTH_SHORT).show()
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Account Created", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this, HomeActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Toast.makeText(this, "Authentication Failed", Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }
         }
     }
 }

@@ -39,7 +39,6 @@ class Login : AppCompatActivity() {
         email = findViewById(R.id.sinemail)
         password = findViewById(R.id.sinpass)
         progressBar = findViewById(R.id.ProgressBar)
-        forgetPass = findViewById(R.id.forgetPass)
         signUp = findViewById(R.id.signup0)
 
         signUp.setOnClickListener {

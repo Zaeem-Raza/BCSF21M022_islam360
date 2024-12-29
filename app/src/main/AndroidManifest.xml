@@ -19,10 +19,10 @@
             android:exported="true"
             android:theme="@style/Theme.Islam360" />
 
-        <activity
-            android:name=".QuranNext"
-            android:exported="false"
+        <activity android:name=".QuranNext"
+            android:exported="true"
             android:theme="@style/Theme.Islam360" />
+
         <activity
             android:name=".Seerat_un_Nabi"
             android:exported="false"

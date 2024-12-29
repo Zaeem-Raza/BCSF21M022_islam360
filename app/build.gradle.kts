@@ -27,10 +27,12 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
@@ -42,22 +44,38 @@ android {
 
 dependencies {
 
+    // AndroidX and Material
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.annotation)
+
+    // ViewModel and LiveData
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    // Navigation Components
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
+    // Firebase Authentication
     implementation(libs.firebase.auth)
+
+    // Retrofit for API calls
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0") // Gson converter for parsing JSON
+
+    // Optional OkHttp dependencies for logging network calls
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
-
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation (libs.sdp.android)
-    implementation (libs.ssp.android)
-    
+
+    // SDP and SSP for dimension scaling
+    implementation(libs.sdp.android)
+    implementation(libs.ssp.android)
 }

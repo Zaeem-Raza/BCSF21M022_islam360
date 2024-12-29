@@ -34,9 +34,6 @@
             android:name=".SahihBukhari"
             android:exported="false" />
         <activity
-            android:name=".QuranBySurah"
-            android:exported="false" />
-        <activity
             android:name=".Direction"
             android:exported="false"
             android:theme="@style/Theme.Islam360" />

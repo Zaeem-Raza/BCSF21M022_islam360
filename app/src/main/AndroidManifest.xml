@@ -12,17 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Islam360"
         tools:targetApi="31">
-
+        <activity
+            android:name=".TasbihActivity"
+            android:exported="false" />
         <!-- Add the Signup Activity -->
         <activity
             android:name=".Signup"
             android:exported="true"
             android:theme="@style/Theme.Islam360" />
-
-        <activity android:name=".QuranNext"
+        <activity
+            android:name=".QuranNext"
             android:exported="true"
             android:theme="@style/Theme.Islam360" />
-
         <activity
             android:name=".Seerat_un_Nabi"
             android:exported="false"
@@ -56,6 +57,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

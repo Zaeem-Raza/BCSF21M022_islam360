@@ -42,4 +42,11 @@
         tools:layout="@layout/fragment_shahadah" />
 
 
+    <fragment
+        android:id="@+id/tasbihFragment"
+        android:name="com.example.islam360.TasbihFragment"
+        tools:layout="@layout/fragment_tasbih" />
+
+
+
 </navigation>

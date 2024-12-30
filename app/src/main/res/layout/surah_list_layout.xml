@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:layout_margin="@dimen/_1sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp">
+
+        <!-- Surah Number -->
+        <TextView
+            android:id="@+id/surahNumber"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/book"
+            android:backgroundTint="@color/teal_700"
+            android:gravity="center"
+            android:text="114"
+            android:textColor="@color/teal_700"
+            android:textSize="@dimen/_8ssp"
+            android:textStyle="bold" />
+
+        <!-- Container for Image and Text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- ImageView -->
+            <ImageView
+                android:id="@+id/imageMakkaMadina"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/ic_quran1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="@dimen/_1sdp" />
+
+            <!-- Text Container -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="clip_horizontal">
+
+                <!-- Surah English Name -->
+                <TextView
+                    android:id="@+id/surahEnglishName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Al-Fatiha"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+
+                <!-- Surah Verses -->
+                <TextView
+                    android:id="@+id/surahVerses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7 VERSES"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/secondaryTextColor" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Surah Arabic Name -->
+        <TextView
+            android:id="@+id/surahArabicName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/suranamefont"
+            android:textSize="@dimen/_20sdp"
+            android:text="63"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/teal_700" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

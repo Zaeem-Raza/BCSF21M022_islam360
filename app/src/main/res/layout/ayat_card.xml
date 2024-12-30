@@ -1,108 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="4dp"
-    android:backgroundTint="@color/greyish_black">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#3BD3D3D3">
 
-    <RelativeLayout
+    <!-- Ayah Card View -->
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="@color/greyish_black"
-        tools:ignore="ExtraText">
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:elevation="3dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        app:strokeWidth="@dimen/_1sdp">
 
-        <!-- Top Options (Translation and Tafseer Tabs) -->
+        <!-- Enclose Ayah Content -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_alignParentTop="true"
-            android:layout_marginBottom="8dp">
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <!-- Header Row with Ayah Number and Overflow Menu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/playButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_play_arrow"
+                    app:iconSize="@dimen/_17sdp"
+                    app:iconTint="@color/teal_700"
+                    style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/isBookMarked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/baseline_bookmark_24"
+                    app:iconTint="@color/teal_700"
+                    style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+
+                <!-- Space for overflow menu -->
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <!-- Ayah Number Label -->
+                <TextView
+                    android:id="@+id/ayahNumberLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3:113"
+                    android:background="@color/light_gray_transparent"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- Ayah Arabic Text -->
+            <TextView
+                android:id="@+id/ayahArabicText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/noorehuda"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_4sdp"
+                android:text="بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ"
+                android:justificationMode="inter_word"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_17ssp"
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@android:drawable/divider_horizontal_dark"
+                android:backgroundTint="@color/black" />
 
             <TextView
-                android:id="@+id/translation_tab"
+                android:id="@+id/ayatDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Translation"
-                android:background="@drawable/background_gradient"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="8dp"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"
-                android:fontFamily="@font/montserrat_regular" />
+                android:layout_weight="1"
+                android:textSize="@dimen/_8sdp"
+                android:fontFamily="@font/al_qalam"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:text="سورة آل عىران ٣ آیت نمبرا پماره ٣ يمارة ركوع٩ سورة ركوع١"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                tools:ignore="RtlCompat"/>
 
+            <!-- English Translation -->
             <TextView
-                android:id="@+id/tafseer_tab"
+                android:id="@+id/ayahEnglishTranslation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tafseer"
-                android:background="@drawable/background_gradient_grey"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="8dp"
-                android:textColor="@android:color/white"
-                android:layout_marginStart="8dp"
-                android:textSize="14sp"
-                android:fontFamily="@font/montserrat_regular" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/ubuntu"
+                android:gravity="clip_horizontal"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="8dp"
+                android:justificationMode="inter_word"
+                android:text="In the name of Allah, the Most Gracious, the Most Merciful."
+                android:textColor="@color/englishcolor"
+                android:textSize="@dimen/_10sdp" />
+
+            <!-- Urdu Translation -->
+            <TextView
+                android:id="@+id/ayahUrduTranslation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/jameelnoorinastaleeq"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="8dp"
+                android:justificationMode="inter_word"
+                android:text="شروع الله کا نام لے کر جو بڑا مہربان نہایت رحم والا ہے"
+                android:layout_gravity="end"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_11sdp" />
+
         </LinearLayout>
-
-        <!-- Ayat Arabic Text -->
-        <TextView
-            android:id="@+id/ayat_arabic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:fontFamily="@font/al_qalam"
-            android:layout_below="@id/translation_tab"
-            android:layout_marginTop="8dp"
-            tools:ignore="NotSibling" />
-
-        <!-- Surah and Ayat Number -->
-        <TextView
-            android:id="@+id/ayat_reference"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="8dp"
-            android:text="1:1"
-            android:textColor="@color/green"
-            android:textSize="14sp"
-            android:fontFamily="@font/montserrat_regular"
-            android:layout_below="@+id/translation_tab"
-            tools:ignore="NotSibling" />
-
-        <!-- Ayat Translation in Urdu -->
-        <TextView
-            android:id="@+id/ayat_translation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ayat_arabic"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="8dp"
-            android:text="سب تعریف اللہ تعالیٰ کے لئے ہے جو تمام جہانوں کا پالنے والا ہے۔"
-            android:textColor="@color/green"
-            android:textSize="16sp"
-            android:fontFamily="@font/al_qalam" />
-
-        <!-- Bottom Icon (e.g., Speaker Icon for Audio) -->
-        <ImageView
-            android:id="@+id/speaker_icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_margin="8dp"
-            android:src="@drawable/ic_speaker"
-            app:tint="@android:color/white" />
-    </RelativeLayout>
-
-</androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

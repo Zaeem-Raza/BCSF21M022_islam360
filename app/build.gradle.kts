@@ -69,6 +69,7 @@ dependencies {
 
     // Optional OkHttp dependencies for logging network calls
     implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    implementation(libs.androidx.preference.ktx)
 
     // Testing
     testImplementation(libs.junit)

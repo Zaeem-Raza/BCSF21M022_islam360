@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 
 class MoreFragment : Fragment() {
 
@@ -29,20 +28,29 @@ class MoreFragment : Fragment() {
         // Find the Shahadah card and set a click listener
         val shahadahCard: View = view.findViewById(R.id.card_shahadah)
         shahadahCard.setOnClickListener {
-            // Ensure this matches the action ID in the navigation graph
             startActivity(Intent(requireContext(), Shahadah::class.java))
         }
 
+        // Find the Prayer Time card and set a click listener
         val prayerCard: View = view.findViewById(R.id.card_prayer_time)
         prayerCard.setOnClickListener {
-            // Navigate to PrayerTime
             startActivity(Intent(requireContext(), PrayerTime::class.java))
         }
+
+        // Find the Qibla Direction card and set a click listener
         val qiblaCard: View = view.findViewById(R.id.card_qibla_direction)
         qiblaCard.setOnClickListener {
-            // Navigate to PrayerTime
             startActivity(Intent(requireContext(), Direction::class.java))
         }
+
+        // Find the Tasbih card and set a click listener
+        val tasbeehCard: View = view.findViewById(R.id.card_Tasbih)
+        tasbeehCard.setOnClickListener {
+            // Open TasbihActivity using Intent
+            val intent = Intent(requireContext(), TasbihActivity::class.java)
+            startActivity(intent)
+        }
+
         return view
     }
 }

@@ -26,37 +26,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <!-- Random Ayat Placeholder -->
-            <TextView
-                android:id="@+id/random_ayat_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Placeholder Arabic Ayat"
-                android:textColor="@android:color/white"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/montserrat_bold" />
-
-            <TextView
-                android:id="@+id/random_ayat_translation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Placeholder Translation"
-                android:textColor="@android:color/white"
-                android:textSize="12sp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat_regular" />
-
-            <TextView
-                android:id="@+id/ayat_reference"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Surah X, Ayah Y"
-                android:textColor="@android:color/white"
-                android:textSize="10sp"
-                android:layout_marginTop="8dp"
-                android:textStyle="italic"
-                android:fontFamily="@font/montserrat_regular" />
 
             <!-- Another Ayat Section with Unique IDs -->
             <androidx.cardview.widget.CardView
@@ -78,7 +47,7 @@
                         android:id="@+id/random_ayat_text_secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="قُلْ هُوَ ٱللَّهُ أَحَدٌ"
+                        android:text="Placeholder Arabic Ayat"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/_17ssp"
                         android:textStyle="bold"
@@ -88,7 +57,7 @@
                         android:id="@+id/random_ayat_translation_secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Say, 'He is Allah, [who is] One.'"
+                        android:text="Placeholder Translation"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/_12ssp"
                         android:layout_marginTop="@dimen/_3ssp"
@@ -98,13 +67,14 @@
                         android:id="@+id/ayat_reference_secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Surah Al-Ikhlas, Ayat 1"
+                        android:text="Surah X, Ayah Y"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/_10ssp"
                         android:layout_marginTop="@dimen/_3sdp"
                         android:textStyle="italic"
                         android:fontFamily="@font/montserrat_regular" />
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- Other Views Below -->

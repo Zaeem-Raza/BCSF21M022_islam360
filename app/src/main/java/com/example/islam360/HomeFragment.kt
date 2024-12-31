@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.islam360.dataAccess.SQLiteHelper
+import com.example.islam360.dataAccess.DbHelper
 
 class HomeFragment : Fragment() {
 
-    private lateinit var dbHelper: SQLiteHelper
+    private lateinit var dbHelper: DbHelper
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -18,20 +18,26 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        // Initialize SQLiteHelper
+        // Initialize DbHelper
+        dbHelper = DbHelper(requireContext())
 
-        dbHelper = SQLiteHelper(requireContext())
-
-        // Fetch a random Ayat and display it
+        // Fetch a random Ayat from the database
         val randomAyat = dbHelper.getRandomAyat()
-        if (randomAyat != null) {
-            val randomAyatText = view.findViewById<TextView>(R.id.random_ayat_text)
-            val randomAyatTranslation = view.findViewById<TextView>(R.id.random_ayat_translation)
-            val ayatReference = view.findViewById<TextView>(R.id.ayat_reference)
 
+        // Find the TextViews for displaying the Ayat and its translation
+        val randomAyatText = view.findViewById<TextView>(R.id.random_ayat_text_secondary)
+        val randomAyatTranslation = view.findViewById<TextView>(R.id.random_ayat_translation_secondary)
+        val ayatReference = view.findViewById<TextView>(R.id.ayat_reference_secondary)
+
+        // Update the TextViews with the Ayat and its translation
+        if (randomAyat != null) {
             randomAyatText.text = randomAyat.arabicText
-            randomAyatTranslation.text = randomAyat.translation
-            ayatReference.text = "Surah ${randomAyat.surahId}, Ayah ${randomAyat.ayahNo}"
+            randomAyatTranslation.text = randomAyat.urduTarajama // Replace with the appropriate translation
+            ayatReference.text = "Surah ${randomAyat.surahId}, Ayah ${randomAyat.ayahId}"
+        } else {
+            randomAyatText.text = "No Ayat found."
+            randomAyatTranslation.text = ""
+            ayatReference.text = ""
         }
 
         return view

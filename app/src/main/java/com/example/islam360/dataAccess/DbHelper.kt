@@ -197,6 +197,33 @@ internal class DbHelper(var mycontext: Context) :
             cursor.close()
             return surahList
         }
+    fun getRandomAyat(): tayah? {
+        val db = this.readableDatabase
+        val query = """
+        SELECT * FROM tayah
+        ORDER BY RANDOM()
+        LIMIT 1;
+    """
+        val cursor = db.rawQuery(query, null)
+        var ayat: tayah? = null
+
+        if (cursor.moveToFirst()) {
+            val engT: Int = 6 + SettingsValue.ENGLISH_TRANSLATION
+            val urduT: Int = 4 + SettingsValue.URDU_TRANSLATION
+            ayat = tayah(
+                ayahId = cursor.getInt(0),
+                surahId = cursor.getInt(1),
+                arabicText = cursor.getString(3),
+                urduTarajama = cursor.getString(urduT),
+                enlishTarjama = cursor.getString(engT),
+                rakuId = cursor.getInt(10),
+                paraId = cursor.getInt(8)
+            )
+        }
+        cursor.close()
+        return ayat
+    }
+
 
     companion object {
         private const val DB_PATH = "/data/data/[YOUR PACKAGE HERE]/databases/"

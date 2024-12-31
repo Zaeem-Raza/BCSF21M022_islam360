@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
+import com.example.islam360.dataAccess.SQLiteHelper
 
 class HomeFragment : Fragment() {
+
+    private lateinit var dbHelper: SQLiteHelper
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -16,20 +18,21 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        // Set the title for the fragment
-        val fragmentTitle = view.findViewById<TextView>(R.id.fragment_title)
-        fragmentTitle.text = "Home"
+        // Initialize SQLiteHelper
 
-        // Set the fragment icon to Home
-        val fragmentIcon = view.findViewById<ImageView>(R.id.fragment_icon)
-        fragmentIcon.visibility = View.GONE  // No icon for home
+        dbHelper = SQLiteHelper(requireContext())
 
-        // Set prayer times programmatically (optional)
-        val prayerTimeNow = view.findViewById<TextView>(R.id.prayer_time_now)
-        prayerTimeNow.text = "Now: DHUHR"
+        // Fetch a random Ayat and display it
+        val randomAyat = dbHelper.getRandomAyat()
+        if (randomAyat != null) {
+            val randomAyatText = view.findViewById<TextView>(R.id.random_ayat_text)
+            val randomAyatTranslation = view.findViewById<TextView>(R.id.random_ayat_translation)
+            val ayatReference = view.findViewById<TextView>(R.id.ayat_reference)
 
-        val upcomingPrayerTime = view.findViewById<TextView>(R.id.prayer_time_upcoming)
-        upcomingPrayerTime.text = "Upcoming: ASR"
+            randomAyatText.text = randomAyat.arabicText
+            randomAyatTranslation.text = randomAyat.translation
+            ayatReference.text = "Surah ${randomAyat.surahId}, Ayah ${randomAyat.ayahNo}"
+        }
 
         return view
     }

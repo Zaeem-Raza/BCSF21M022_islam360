@@ -197,6 +197,27 @@ internal class DbHelper(var mycontext: Context) :
             cursor.close()
             return surahList
         }
+    fun getVerseCountForSurahs(): Map<Int, Int> {
+        val db = this.readableDatabase
+        val query = """
+        SELECT SuraID, COUNT(*) AS VerseCount 
+        FROM tayah 
+        GROUP BY SuraID
+    """
+        val cursor = db.rawQuery(query, null)
+        val verseCountMap = mutableMapOf<Int, Int>()
+
+        if (cursor.moveToFirst()) {
+            do {
+                val surahId = cursor.getInt(cursor.getColumnIndexOrThrow("SuraID"))
+                val verseCount = cursor.getInt(cursor.getColumnIndexOrThrow("VerseCount"))
+                verseCountMap[surahId] = verseCount
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        return verseCountMap
+    }
+
     fun getRandomAyat(): tayah? {
         val db = this.readableDatabase
         val query = """

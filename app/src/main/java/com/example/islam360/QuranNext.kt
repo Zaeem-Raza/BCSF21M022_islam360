@@ -1,7 +1,7 @@
 package com.example.islam360
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,12 +24,16 @@ class QuranNext : AppCompatActivity() {
         // Fetch Surah details from the database
         val surahDetailsList = dbHelper.surahDetails
 
+        // Fetch the verse counts
+        val verseCounts = dbHelper.getVerseCountForSurahs()
+
         // Convert SurahDetails to SurahModel for adapter compatibility
         val surahList = surahDetailsList.map { surahDetail ->
+            val ayahCount = verseCounts[surahDetail.surahNumber.toInt()] ?: 0 // Default to 0 if not found
             SurahModel(
-                surahDetail.surahNumber.toInt(), // Convert Surah number to Int
-                surahDetail.surahNameEnglish, // Use the English name
-                0 // If Ayah count is unavailable, set a default value like 0
+                surahID = surahDetail.surahNumber.toInt(), // Convert Surah number to Int
+                surahName = surahDetail.surahNameEnglish, // Use the English name
+                ayahCount = ayahCount // Set the fetched verse count
             )
         }
 
@@ -37,7 +41,10 @@ class QuranNext : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = SurahAdapter(surahList) { surah ->
             // Handle item click
-            Toast.makeText(this, "Clicked: ${surah.surahName}", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, AyatActivity::class.java)
+            intent.putExtra("SURAH_ID", surah.surahID) // Pass Surah ID
+            intent.putExtra("SURAH_NAME", surah.surahName) // Pass Surah Name
+            startActivity(intent)
         }
     }
 }

@@ -6,12 +6,10 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.islam360.dataAccess.UserDatabaseHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
 class Login : AppCompatActivity() {
-
 
     private lateinit var signUp: TextView
     private lateinit var signIn: Button
@@ -19,7 +17,6 @@ class Login : AppCompatActivity() {
     private lateinit var password: EditText
     private lateinit var progressBar: ProgressBar
     private lateinit var mAuth: FirebaseAuth
-    private lateinit var dbHelper: UserDatabaseHelper
 
     override fun onStart() {
         super.onStart()
@@ -42,7 +39,6 @@ class Login : AppCompatActivity() {
         password = findViewById(R.id.sinpass)
         progressBar = findViewById(R.id.ProgressBar)
         signUp = findViewById(R.id.signup0)
-        dbHelper = UserDatabaseHelper(this)
 
         signUp.setOnClickListener {
             val intent = Intent(this, Signup::class.java)
@@ -51,8 +47,8 @@ class Login : AppCompatActivity() {
 
         signIn.setOnClickListener {
             progressBar.visibility = View.VISIBLE
-            val emails = email.text.toString().trim()
-            val passwords = password.text.toString().trim()
+            val emails = email.text.toString()
+            val passwords = password.text.toString()
 
             if (TextUtils.isEmpty(emails)) {
                 Toast.makeText(this, "Email cannot be empty", Toast.LENGTH_SHORT).show()
@@ -71,16 +67,9 @@ class Login : AppCompatActivity() {
                     progressBar.visibility = View.GONE
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-
-                        // Verify with local database
-                        val isVerified = dbHelper.loginUser(emails, passwords)
-                        if (isVerified) {
-                            val intent = Intent(this, HomeActivity::class.java)
-                            startActivity(intent)
-                            finish()
-                        } else {
-                            Toast.makeText(this, "Local verification failed!", Toast.LENGTH_SHORT).show()
-                        }
+                        val intent = Intent(this, HomeActivity::class.java)
+                        startActivity(intent)
+                        finish()
                     } else {
                         Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
                     }

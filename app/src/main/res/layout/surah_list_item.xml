@@ -17,7 +17,7 @@
             android:id="@+id/surahNumber"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/book"
+            android:background="@drawable/ic_quran"
             android:gravity="center"
             android:text="1"
             android:textColor="@android:color/white"

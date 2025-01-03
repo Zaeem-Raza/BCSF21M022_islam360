@@ -9,8 +9,8 @@ import com.example.islam360.R
 import com.example.islam360.models.SurahModel
 
 class SurahAdapter(
-    private val surahList: List<SurahModel>, // List of SurahModel objects
-    private val onSurahClick: (SurahModel) -> Unit // Callback with SurahModel object
+    private var surahList: List<SurahModel>,
+    private val onSurahClick: (SurahModel) -> Unit
 ) : RecyclerView.Adapter<SurahAdapter.SurahViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SurahViewHolder {
@@ -20,17 +20,21 @@ class SurahAdapter(
 
     override fun onBindViewHolder(holder: SurahViewHolder, position: Int) {
         val surah = surahList[position]
-        holder.surahNumber.text = surah.surahID.toString() // Set Surah Number
-        holder.surahName.text = surah.surahName // Set Surah Name
-        holder.surahAyahs.text = "${surah.ayahCount} Verses" // Show the verse count
+        holder.surahNumber.text = surah.surahID.toString()
+        holder.surahName.text = surah.surahName
+        holder.surahAyahs.text = "${surah.ayahCount} Verses"
 
-        // Handle item click
         holder.itemView.setOnClickListener {
-            onSurahClick(surah) // Pass SurahModel object to the callback
+            onSurahClick(surah)
         }
     }
 
     override fun getItemCount(): Int = surahList.size
+
+    fun updateList(newList: List<SurahModel>) {
+        surahList = newList
+        notifyDataSetChanged()
+    }
 
     class SurahViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val surahNumber: TextView = view.findViewById(R.id.surahNumber)

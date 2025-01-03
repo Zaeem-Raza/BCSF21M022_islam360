@@ -46,10 +46,9 @@ class QuranFragment : Fragment() {
             startActivity(intent)
         }
 
-        // New click listeners for remaining cards
-        view.findViewById<CardView>(R.id.fifteen_line_quran)?.setOnClickListener {
-            val intent = Intent(activity, QuranNext::class.java)
-            intent.putExtra("mode", "fifteen_line")
+        val quranBySura = view.findViewById<CardView>(R.id.bysurah)
+        quranBySura.setOnClickListener {
+            val intent = Intent(activity, BySurah::class.java)
             startActivity(intent)
         }
 

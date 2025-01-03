@@ -52,6 +52,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.annotation)
 
+
+
     // ViewModel and LiveData
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
@@ -63,9 +65,7 @@ dependencies {
     // Firebase Authentication
     implementation(libs.firebase.auth)
 
-    // Retrofit for API calls
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0") // Gson converter for parsing JSON
+// Gson converter for parsing JSON
 
     // Optional OkHttp dependencies for logging network calls
     implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
@@ -79,4 +79,5 @@ dependencies {
     // SDP and SSP for dimension scaling
     implementation(libs.sdp.android)
     implementation(libs.ssp.android)
+
 }

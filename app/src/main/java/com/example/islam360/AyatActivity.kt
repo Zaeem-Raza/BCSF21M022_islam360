@@ -26,7 +26,8 @@ class AyatActivity : AppCompatActivity() {
         if (surahId != -1) {
             val ayatList = dbHelper.getSurah(surahId)
             recyclerView.layoutManager = LinearLayoutManager(this)
-            recyclerView.adapter = AyatAdapter(ayatList)
+            recyclerView.adapter = AyatAdapter(ayatList, this)
+
 
             title = "Surah: $surahName" // Set the title to the Surah name
         } else {

@@ -1,33 +1,44 @@
 package com.example.islam360.Adapters
 
-import AyatModel
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.islam360.AyatDetail
 import com.example.islam360.R
 import com.example.islam360.tayah
 
 class AyatAdapter(
-    private val ayatList: List<tayah>
+    private val ayatList: List<tayah>,
+    private val context: Context
 ) : RecyclerView.Adapter<AyatAdapter.AyatViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AyatViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.ayat_list_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.ayat_items, parent, false)
         return AyatViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: AyatViewHolder, position: Int) {
-        val ayat = ayatList[position]
-        holder.ayatText.text = ayat.arabicText
-        holder.translationText.text = ayat.urduTarajama
+        val ayah = ayatList[position]
+        holder.arabicText.text = ayah.arabicText
+
+        // Set click listener to open AyatDetail activity
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, AyatDetail::class.java)
+            intent.putExtra("AYAH_ID", ayah.ayahId)
+            intent.putExtra("ARABIC_TEXT", ayah.arabicText)
+            intent.putExtra("URDU_TRANSLATION", ayah.urduTarajama)
+            intent.putExtra("ENGLISH_TRANSLATION", ayah.enlishTarjama)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = ayatList.size
 
-    class AyatViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val ayatText: TextView = view.findViewById(R.id.ayatText)
-        val translationText: TextView = view.findViewById(R.id.translationText)
+    class AyatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val arabicText: TextView = itemView.findViewById(R.id.arabicText)
     }
 }

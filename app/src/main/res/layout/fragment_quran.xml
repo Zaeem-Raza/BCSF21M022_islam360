@@ -104,7 +104,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/fifteen_line_quran"
+            android:id="@+id/bysurah"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -115,6 +115,7 @@
             android:layout_gravity="fill">
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -132,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_4sdp"
-                    android:text="15 Line Quran"
+                    android:text="Quran By Surah"
                     android:textSize="@dimen/_14ssp"
                     android:textColor="#FFFFFF" />
             </LinearLayout>

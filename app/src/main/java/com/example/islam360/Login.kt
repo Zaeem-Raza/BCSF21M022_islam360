@@ -40,6 +40,8 @@ class Login : AppCompatActivity() {
         progressBar = findViewById(R.id.ProgressBar)
         signUp = findViewById(R.id.signup0)
 
+        email.setText("test1@gmail.com")
+        password.setText("123456")
         signUp.setOnClickListener {
             val intent = Intent(this, Signup::class.java)
             startActivity(intent)

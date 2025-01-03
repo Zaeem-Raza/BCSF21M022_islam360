@@ -64,15 +64,17 @@
             android:textSize="16sp"
             android:gravity="center_vertical" />
 
-        <!-- Static Episode List -->
+        <!-- Episode List -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingTop="8dp">
 
+            <!-- Episodes 1 to 8 -->
             <!-- Episode 1 -->
             <LinearLayout
+                android:id="@+id/episode1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -128,6 +130,7 @@
 
             <!-- Episode 2 -->
             <LinearLayout
+                android:id="@+id/episode2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -180,9 +183,8 @@
                     android:src="@drawable/ic_share"
                     android:contentDescription="Share Icon" />
             </LinearLayout>
-
-            <!-- Episode 3 -->
             <LinearLayout
+                android:id="@+id/episode3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -222,7 +224,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Bani Hashim Ne Social Boycott Ki Wajah Se..."
+                        android:text="Bani Hashim Ne Social Boycott ki Wajah Se Bohat Sakhtiyan..."
                         android:textColor="#BBBBBB"
                         android:textSize="12sp"
                         android:maxLines="2"
@@ -235,9 +237,8 @@
                     android:src="@drawable/ic_share"
                     android:contentDescription="Share Icon" />
             </LinearLayout>
-
-            <!-- Episode 4 -->
             <LinearLayout
+                android:id="@+id/episode4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -261,7 +262,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4. Mein Mohammad Tumhary Hawalay Karne Ko Tayyar Hun"
+                        android:text="4.Mai Muhammas Tumharay hawale krne ko Tayar hun"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp"
                         android:maxLines="1"
@@ -270,14 +271,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="12:34"
+                        android:text="13:08"
                         android:textColor="#BBBBBB"
                         android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Teen Saal Tak Bani Hashim Shab Mein Sakhtiyan..."
+                        android:text="Teen Saal tak Bani Hashim Shab me Sakhtiyan Brdasht krty rahy..."
                         android:textColor="#BBBBBB"
                         android:textSize="12sp"
                         android:maxLines="2"
@@ -290,9 +291,10 @@
                     android:src="@drawable/ic_share"
                     android:contentDescription="Share Icon" />
             </LinearLayout>
-
+            <!-- Repeat the above format for Episode 3 to Episode 8 -->
             <!-- Episode 5 -->
             <LinearLayout
+                android:id="@+id/episode5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -333,6 +335,174 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Shab Se Wapas Aa Kar Rasool Allah SAW Ke Chacha..."
+                        android:textColor="#BBBBBB"
+                        android:textSize="12sp"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_share"
+                    android:contentDescription="Share Icon" />
+            </LinearLayout>
+
+            <!-- Episode 6 -->
+            <LinearLayout
+                android:id="@+id/episode6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#1E1E1E"
+                android:layout_marginBottom="4dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_episode_thumbnail"
+                    android:contentDescription="Episode Thumbnail" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6. Jab Rasool Allah SAW Ke Jootay Khoon Se Bhar Gaye"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="09:25"
+                        android:textColor="#BBBBBB"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quresh Ke Sardar Walid Bin Mughira Ne Kaha..."
+                        android:textColor="#BBBBBB"
+                        android:textSize="12sp"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_share"
+                    android:contentDescription="Share Icon" />
+            </LinearLayout>
+
+            <!-- Episode 7 -->
+            <LinearLayout
+                android:id="@+id/episode7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#1E1E1E"
+                android:layout_marginBottom="4dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_episode_thumbnail"
+                    android:contentDescription="Episode Thumbnail" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7. Iss Nabi Ko Hum Qayamat Tak Nahi Manay Gae"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="09:35"
+                        android:textColor="#BBBBBB"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Abu Lahab Ki Biwi Umm Jameel Ne Rasool Allah SAW..."
+                        android:textColor="#BBBBBB"
+                        android:textSize="12sp"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_share"
+                    android:contentDescription="Share Icon" />
+            </LinearLayout>
+
+            <!-- Episode 8 -->
+            <LinearLayout
+                android:id="@+id/episode8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#1E1E1E"
+                android:layout_marginBottom="4dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_episode_thumbnail"
+                    android:contentDescription="Episode Thumbnail" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8. Tumharay Baad Zamana Badaltay Dekha Hai"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14:00"
+                        android:textColor="#BBBBBB"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aik Baar Rasool Allah SAW Ne Farmaya Ke Mujhe Allah..."
                         android:textColor="#BBBBBB"
                         android:textSize="12sp"
                         android:maxLines="2"

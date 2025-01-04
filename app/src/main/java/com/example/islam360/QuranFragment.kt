@@ -48,9 +48,10 @@ class QuranFragment : Fragment() {
 
         val quranBySura = view.findViewById<CardView>(R.id.bysurah)
         quranBySura.setOnClickListener {
-            val intent = Intent(activity, BySurah::class.java)
+            val intent = Intent(activity, BySurahActivity::class.java) // Updated activity name
             startActivity(intent)
         }
+
 
         view.findViewById<CardView>(R.id.fahmulquran)?.setOnClickListener {
             val intent = Intent(activity, QuranNext::class.java)

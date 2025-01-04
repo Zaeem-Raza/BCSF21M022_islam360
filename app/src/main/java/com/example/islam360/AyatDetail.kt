@@ -22,7 +22,7 @@ class AyatDetail : AppCompatActivity() {
         arabicTextView.text = arabicText
 
         // Show Urdu translation by default
-        translationTextView.text = urduTranslation
+        translationTextView.text = englishTranslation
 
         // Allow switching between Urdu and English translations
         translationTextView.setOnClickListener {

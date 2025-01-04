@@ -39,7 +39,7 @@ class QuranNext : AppCompatActivity() {
             val ayahCount = verseCounts[surahDetail.surahNumber.toInt()] ?: 0 // Default to 0 if not found
             SurahModel(
                 surahID = surahDetail.surahNumber.toInt(), // Convert Surah number to Int
-                surahName = surahDetail.surahNameUrdu, // Use the urdu name
+                surahName = surahDetail.surahNameEnglish, // Use the urdu name
                 ayahCount = ayahCount // Set the fetched verse count
             )
         }.toMutableList()

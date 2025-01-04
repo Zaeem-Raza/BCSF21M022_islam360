@@ -19,7 +19,7 @@
             android:name=".AyatDetail"
             android:exported="false" />
         <activity
-            android:name=".BySurah"
+            android:name=".BySurahActivity"
             android:exported="false" />
         <activity
             android:name=".AyatActivity"

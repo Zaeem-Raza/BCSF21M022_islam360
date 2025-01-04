@@ -24,6 +24,7 @@ class QuranNext : AppCompatActivity() {
     private lateinit var searchBar: EditText
     private lateinit var favoritesButton: Button
     private var surahList = mutableListOf<SurahModel>()
+    private var showingFavorites = false // Boolean flag to track current state
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +47,7 @@ class QuranNext : AppCompatActivity() {
             val ayahCount = verseCounts[surahDetail.surahNumber.toInt()] ?: 0 // Default to 0 if not found
             SurahModel(
                 surahID = surahDetail.surahNumber.toInt(), // Convert Surah number to Int
-                surahName = surahDetail.surahNameEnglish, // Use the Urdu name
+                surahName = surahDetail.surahNameUrdu, // Use the Urdu name
                 ayahCount = ayahCount // Set the fetched verse count
             )
         }.toMutableList()
@@ -81,7 +82,7 @@ class QuranNext : AppCompatActivity() {
 
         // Set up Favorites Button
         favoritesButton.setOnClickListener {
-            showFavorites()
+            toggleFavorites()
         }
     }
 
@@ -92,9 +93,19 @@ class QuranNext : AppCompatActivity() {
         surahAdapter.updateList(filteredList)
     }
 
-    private fun showFavorites() {
+    private fun toggleFavorites() {
         val userId = FirebaseAuth.getInstance().currentUser?.uid ?: ""
-        val favoritesList = localDbHelper.getFavorites(userId)
-        surahAdapter.updateList(favoritesList)
+        if (showingFavorites) {
+            // If showing favorites, switch back to showing all Surahs
+            surahAdapter.updateList(surahList)
+            showingFavorites = false
+            favoritesButton.text = "Favourites" // Update button text
+        } else {
+            // If showing all Surahs, switch to showing only favorites
+            val favoritesList = localDbHelper.getFavorites(userId)
+            surahAdapter.updateList(favoritesList)
+            showingFavorites = true
+            favoritesButton.text = "All Surahs" // Update button text
+        }
     }
 }

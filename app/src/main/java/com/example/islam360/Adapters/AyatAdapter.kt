@@ -13,7 +13,8 @@ import com.example.islam360.tayah
 
 class AyatAdapter(
     private val ayatList: List<tayah>,
-    private val context: Context
+    private val context: Context,
+    private val surahId: Int // Pass Surah ID for potential use in AyatDetail
 ) : RecyclerView.Adapter<AyatAdapter.AyatViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AyatViewHolder {
@@ -28,10 +29,11 @@ class AyatAdapter(
         // Set click listener to open AyatDetail activity
         holder.itemView.setOnClickListener {
             val intent = Intent(context, AyatDetail::class.java)
-            intent.putExtra("AYAH_ID", ayah.ayahId)
-            intent.putExtra("ARABIC_TEXT", ayah.arabicText)
-            intent.putExtra("URDU_TRANSLATION", ayah.urduTarajama)
-            intent.putExtra("ENGLISH_TRANSLATION", ayah.enlishTarjama)
+            intent.putExtra("SURAH_ID", surahId) // Pass Surah ID to AyatDetail
+            intent.putExtra("AYAH_ID", ayah.ayahId) // Pass Ayah ID
+            intent.putExtra("ARABIC_TEXT", ayah.arabicText) // Pass Arabic text
+            intent.putExtra("URDU_TRANSLATION", ayah.urduTarajama) // Pass Urdu translation
+            intent.putExtra("ENGLISH_TRANSLATION", ayah.englishTarjama) // Pass English translation
             context.startActivity(intent)
         }
     }

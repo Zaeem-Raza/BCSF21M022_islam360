@@ -236,7 +236,7 @@ internal class DbHelper(var mycontext: Context) :
                 surahId = cursor.getInt(1),
                 arabicText = cursor.getString(3),
                 urduTarajama = cursor.getString(urduT),
-                enlishTarjama = cursor.getString(engT),
+                englishTarjama = cursor.getString(engT),
                 rakuId = cursor.getInt(10),
                 paraId = cursor.getInt(8)
             )

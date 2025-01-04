@@ -1,11 +1,11 @@
 package com.example.islam360
 
-class tayah(
+data class tayah(
     var ayahId: Int,
     var surahId: Int,
     var arabicText: String,
     var urduTarajama: String,
-    var enlishTarjama: String,
+    var englishTarjama: String,
     var paraId: Int,
     var rakuId: Int
 )

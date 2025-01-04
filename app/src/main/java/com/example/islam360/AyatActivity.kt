@@ -24,12 +24,16 @@ class AyatActivity : AppCompatActivity() {
         val surahName = intent.getStringExtra("SURAH_NAME") ?: "Unknown Surah"
 
         if (surahId != -1) {
+            // Fetch the list of Ayat for the given Surah ID
             val ayatList = dbHelper.getSurah(surahId)
-            recyclerView.layoutManager = LinearLayoutManager(this)
-            recyclerView.adapter = AyatAdapter(ayatList, this)
 
-
-            title = "Surah: $surahName" // Set the title to the Surah name
+            if (ayatList.isNotEmpty()) {
+                recyclerView.layoutManager = LinearLayoutManager(this)
+                recyclerView.adapter = AyatAdapter(ayatList, this, surahId)
+                title = "Surah: $surahName"
+            } else {
+                Toast.makeText(this, "No Ayat found for this Surah", Toast.LENGTH_SHORT).show()
+            }
         } else {
             Toast.makeText(this, "Invalid Surah ID", Toast.LENGTH_SHORT).show()
         }

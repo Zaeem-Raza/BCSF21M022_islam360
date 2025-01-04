@@ -1,27 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
     android:orientation="vertical"
-    android:background="@drawable/drawer_header_background"
-    android:padding="@dimen/_12sdp">
+    android:padding="16dp"
+    android:background="@color/light_gray_transparent">
 
+    <!-- User Profile Image -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_user_profile"
+        android:contentDescription="@string/profile_image"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp" />
+
+    <!-- User Email -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/user_email"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/_6sdp"
-        android:text="Not a Member?"
-        android:textColor="@android:color/white" />
+        android:text="Welcome, Guest!"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
 
+    <!-- Login Button -->
     <Button
         android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:textColor="@android:color/white"
-        android:background="@drawable/rounded_button" />
-
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

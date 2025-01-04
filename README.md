@@ -1,80 +1,121 @@
-# Islam360 Clone - BCSf21M022
+# Islam360
 
-## Project Overview
-
-The **Islam360 Clone** is a mobile application designed to replicate the key features of the original Islam360 app. It offers users access to essential Islamic resources, including the **Quran**, **Ahadith**, **Duas**, and a **Qibla direction** finder. This version primarily focuses on the UI/UX aspect, with plans to integrate complete functionality in the future. The goal is to create an intuitive and user-friendly interface for spiritual guidance.
+Islam360 is an Android application designed to provide comprehensive Islamic resources, including the Quran by Surah, translations, and other religious content. The app features a user-friendly interface with dynamic functionalities like searching and viewing Quranic content.
 
 ---
 
-## Setup Instructions
+## Features
 
-Follow these steps to set up and run the project:
+### Core Functionalities
+- **Quran by Surah**
+  - Displays all Surahs from the Quran.
+  - Includes information like Surah name (Urdu and English), number of verses, and type (Makki/Madni).
+  - Search functionality for quick access to Surahs.
+  - Differentiated icons for Makki (Makka) and Madni (Madina) Surahs.
 
-1. **Clone the Repository**:
+- **Surah Details**
+  - Shows Arabic text, translations (Urdu and English), and metadata for each Ayat.
+  - Allows users to toggle between Urdu and English translations.
+
+- **User Authentication**
+  - Firebase-based login and signup.
+  - Option to save login credentials for automatic login.
+
+### Additional Features
+- **Dynamic RecyclerView**
+  - Custom layout for displaying Surah details.
+  - Card-based design for an intuitive look and feel.
+
+- **SQLite Database Integration**
+  - Fetch Surah and Ayat data dynamically.
+  - Optimized queries for performance.
+
+---
+
+## Tech Stack
+
+- **Languages:** Kotlin
+- **Database:** SQLite
+- **Authentication:** Firebase Authentication
+- **UI Framework:** ConstraintLayout, RecyclerView, and CardView
+- **Tools:** Android Studio
+
+---
+
+## Project Structure
+
+```
+Islam360
+├── Adapters
+│   └── SurahAdapter.kt
+├── dataAccess
+│   └── DbHelper.kt
+├── models
+│   └── SurahModel.kt
+│   └── tayah.kt
+├── Activities
+│   ├── Login.kt
+│   ├── BySurah.kt
+│   ├── AyatActivity.kt
+│   └── Seerat_un_Nabi.kt
+├── Fragments
+│   └── QuranFragment.kt
+├── Layouts
+│   ├── activity_login.xml
+│   ├── activity_by_surah.xml
+│   ├── activity_ayat.xml
+│   ├── fragment_quran.xml
+│   └── surah_list_item.xml
+└── Resources
+    ├── drawable
+    ├── values
+    └── fonts
+```
+
+---
+
+## Installation
+
+1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-repo/islam360-clone.git
-   cd islam360-clone
+   git clone https://github.com/your-repo/Islam360.git
+   ```
 
-2. Open the Project in Android Studio
+2. **Open in Android Studio**
+   - Open Android Studio and select "Open an Existing Project."
 
-3. **Launch Android Studio**:
-   - Open Android Studio on your system.
+3. **Add the Database**
+   - Place the `QuranDb.db` file in the `assets` folder of the project.
 
-4 **Open the cloned project**:
-   - From the Android Studio welcome screen, select **Open**.
-   - Navigate to the root directory of the cloned project and select it.
+4. **Configure Firebase**
+   - Add your Firebase project `google-services.json` file in the `app` directory.
 
-5. **Build and Run the Project**:
-   - Sync the Gradle files and install any missing dependencies.
-   - Once the project is synced, click **Run** or press `Shift + F10` to launch the application on an emulator or physical device.
-
-### Dependencies:
-- Kotlin
-- View Binding for UI components
-- Android SDK version 30+
-
-## Screens and Their Purpose
-
-### 1. Splash Screen (MainActivity)
-- **Purpose**: A transition screen that introduces users to the app and automatically redirects them to the direction page after a brief delay.
-
-### 2. Direction Screen (DirectionActivity)
-- **Purpose**: Displays a Qibla compass and prompts users to grant location access for calculating accurate prayer times and Qibla direction.
-- **Note**: Users can either allow location permission or skip this step.
-
-### 3. Home Screen (HomeActivity)
-- **Purpose**: This screen serves as the main hub for accessing functionalities like Quran, Hadith, Duas, and more. The current layout is simple, with plans for future expansion.
-
-### 4. Login Screen
-- **Purpose**: Provides users with options to log in via Facebook or Gmail and displays the app’s features. Future versions will implement full user authentication.
+5. **Build and Run**
+   - Build the project and run it on an Android device/emulator.
 
 ---
 
-## Technical Challenges
+## Usage
 
-### 1. UI/UX Design
-Creating an aesthetically pleasing yet functional UI was a significant challenge. Key focus areas included achieving consistent alignment, ensuring responsiveness across different screen sizes, and maintaining readability.
+1. **Login/Signup**
+   - Register or log in with Firebase Authentication.
 
-### 2.View Binding & Navigation:
+2. **Explore Surahs**
+   - Navigate to "Quran by Surah" to view all Surahs.
+   - Use the search bar to find specific Surahs.
 
-Implementing View Binding for smoother view management and setting up navigation between different activities was an initial challenge. Ensuring seamless transitions and correct lifecycle handling required careful management.
-Managing System UI Insets:
+3. **View Ayat Details**
+   - Click on a Surah to see its Ayat.
+   - Toggle between Urdu and English translations.
 
-Handling system UI elements like the status bar and navigation bars using WindowInsetsCompat was complex, especially for edge-to-edge layouts, which required additional padding management for a visually appealing interface.
+---
 
+## Contributing
 
-# Future Plans
-## Implement Full Functionality:
+Contributions are welcome! If you want to contribute:
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes and submit a pull request.
 
-We plan to implement Quran and Hadith browsing, including search and bookmark features, alongside full Dua collections. The Qibla direction feature will also integrate real-time location updates for precision.
-Settings and Customization:
+---
 
-Future iterations will include Settings for language options, app themes, and notification preferences for prayer times and important events.
-###Notifications:
-
-Add notifications for prayer times, Islamic dates, and reminders for daily dua and hadith.
-Authentication & User Profiles:
-
-Support user login through social platforms, with personal bookmarks and progress tracking for reading Quran or Hadith.
-# Conclusion
-This project is an ongoing effort to create a fully-featured Islamic resource application, combining usability with a rich array of features for users. The current phase emphasizes design and initial navigation, with more features to come in future updates.

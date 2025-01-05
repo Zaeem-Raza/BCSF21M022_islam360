@@ -50,7 +50,6 @@ Islam360 is a comprehensive Islamic application designed to enhance your spiritu
 - **RecyclerView**: For dynamic lists such as Quran Surahs and Ayahs.
 - **MediaPlayer**: For audio recitation playback.
 - **YouTube API**: For embedding Seerat-un-Nabi videos.
-- **Android Jetpack Components**: Navigation, LiveData, ViewModel.
 
 ## How to Use the App
 
@@ -87,6 +86,6 @@ Islam360 is a comprehensive Islamic application designed to enhance your spiritu
 We welcome contributions to enhance Islam360! Feel free to open issues or submit pull requests.
 
 ## Contact
-For any inquiries, suggestions, or feedback, please email us at: [your-email@example.com]
+For any inquiries, suggestions, or feedback, please email us at: bcsf21m022@pucit.edu.pk
 
 May Allah (SWT) accept your efforts in using and contributing to this app. Ameen.

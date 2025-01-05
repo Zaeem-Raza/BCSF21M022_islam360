@@ -28,14 +28,21 @@ class SurahAdapter(
 
     override fun onBindViewHolder(holder: SurahViewHolder, position: Int) {
         val surah = surahList[position]
+
+        // Set dynamic Surah Number
+        holder.surahNumber.text = (position + 1).toString()
+
+        // Set Surah Name and Ayah Count
         holder.surahName.text = surah.surahName
         holder.surahAyahs.text = "${surah.ayahCount} Verses"
 
+        // Update favorite icon based on whether it's a favorite
         val isFavorite = favoriteSurahIds.contains(surah.surahID)
         holder.favoriteButton.setImageResource(
             if (isFavorite) R.drawable.ic_favorite else R.drawable.ic_favorite_border
         )
 
+        // Handle favorite button click
         holder.favoriteButton.setOnClickListener {
             if (isFavorite) {
                 dbHelper.removeFavorite(userId, surah.surahID)
@@ -44,9 +51,10 @@ class SurahAdapter(
                 dbHelper.addFavorite(userId, surah.surahID, surah.surahName, surah.ayahCount)
                 favoriteSurahIds.add(surah.surahID)
             }
-            notifyItemChanged(position) // Update the specific item to refresh the icon
+            notifyItemChanged(position) // Refresh the specific item
         }
 
+        // Handle Surah item click
         holder.itemView.setOnClickListener {
             onSurahClick(surah)
         }
@@ -60,6 +68,7 @@ class SurahAdapter(
     }
 
     class SurahViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val surahNumber: TextView = view.findViewById(R.id.surahNumber) // Dynamic Surah Number
         val surahName: TextView = view.findViewById(R.id.surahEnglishName)
         val surahAyahs: TextView = view.findViewById(R.id.surahVerses)
         val favoriteButton: ImageView = view.findViewById(R.id.favoriteButton)

@@ -15,16 +15,7 @@ class Direction : AppCompatActivity() {
         //  binding = ActivityDirectionBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_direction)
 
-//        // Set up listeners for Skip and Allow buttons
-//        binding.skipButton.setOnClickListener {
-//            // Redirect to Home screen when Skip is clicked
-//            navigateToHome()
-//        }
-//
-//        binding.allowButton.setOnClickListener {
-//            // Redirect to Home screen when Allow is clicked
-//            navigateToHome()
-//        }
+
     }
 
     // Function to handle navigation to HomeActivity

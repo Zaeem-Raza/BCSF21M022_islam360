@@ -41,9 +41,6 @@ class Login : AppCompatActivity() {
         progressBar = findViewById(R.id.ProgressBar)
         signUp = findViewById(R.id.signup0)
 
-        // Pre-fill for testing purposes (remove in production)
-        email.setText("test1@gmail.com")
-        password.setText("123456")
     }
 
     private fun setupClickListeners() {

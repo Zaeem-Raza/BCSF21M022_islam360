@@ -12,6 +12,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import com.example.islam360.R
+import com.example.islam360.dataAccess.DbHelper
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -80,11 +81,14 @@ class MiniPlayerFragment : BottomSheetDialogFragment() {
     }
 
     fun playAudio(surahId: Int, ayahId: Int) {
+        Log.d("surah id and aya id", surahId.toString())
+        Log.d("surah id and aya id", ayahId.toString())
         val audioUrl = "https://everyayah.com/data/AbdulSamad_64kbps_QuranExplorer.Com/${"%03d".format(surahId)}${"%03d".format(ayahId)}.mp3"
         Log.d("AudioURL", audioUrl)
 
         streamAudio(audioUrl)
     }
+
 
     private fun streamAudio(url: String) {
         CoroutineScope(Dispatchers.Main).launch {
@@ -103,7 +107,7 @@ class MiniPlayerFragment : BottomSheetDialogFragment() {
                     }
                 }
                 mediaPlayer?.setOnErrorListener { _, what, extra ->
-                    Toast.makeText(context, "Error playing audio: $what, $extra", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(context, "Error playing audio: $what, $extra", Toast.LENGTH_SHORT).show()
                     true
                 }
             } catch (e: Exception) {

@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/light_gray_transparent">
+    android:background="@color/greyish_black">
 
     <!-- User Profile Image -->
     <ImageView

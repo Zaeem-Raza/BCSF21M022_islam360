@@ -2,11 +2,13 @@ package com.example.islam360
 
 import MiniPlayerFragment
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.islam360.dataAccess.DbHelper
 
 class AyatDetail : AppCompatActivity() {
 
@@ -43,6 +45,7 @@ class AyatDetail : AppCompatActivity() {
 
         playButton.setOnClickListener {
             if (surahId != -1 && ayahId != -1) {
+                fetchAndLogAyaNumber(surahId, ayahId)
                 playAyahAudio(surahId, ayahId)
             } else {
                 Toast.makeText(this, "Invalid Surah or Ayah ID", Toast.LENGTH_SHORT).show()
@@ -50,9 +53,22 @@ class AyatDetail : AppCompatActivity() {
         }
     }
 
+    private fun fetchAndLogAyaNumber(surahId: Int, ayahId: Int) {
+        val dbHelper = DbHelper(this)
+        val result = dbHelper.getAyahNumber(surahId, ayahId)
+        if (result != null) {
+            val (retrievedSurahId, ayahNumber) = result
+            Log.d("AyatDetail", "Surah ID: $retrievedSurahId, Ayah Number: $ayahNumber")
+        } else {
+            Log.d("AyatDetail", "No matching Ayah found for Surah ID: $surahId, Ayah ID: $ayahId")
+        }
+    }
+
     private fun playAyahAudio(surahId: Int, ayahId: Int) {
         val miniPlayerFragment = MiniPlayerFragment()
         miniPlayerFragment.show(supportFragmentManager, "MiniPlayer")
+        fetchAndLogAyaNumber(surahId,ayahId)
+
         miniPlayerFragment.playAudio(surahId, ayahId)
     }
 }

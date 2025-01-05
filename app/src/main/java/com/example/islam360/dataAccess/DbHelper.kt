@@ -197,6 +197,26 @@ internal class DbHelper(var mycontext: Context) :
             cursor.close()
             return surahList
         }
+    fun getAyahNumber(surahId: Int, ayahId: Int): Pair<Int, Int>? {
+        val db = this.readableDatabase
+        val query = """
+        SELECT SuraID, AyaNo
+        FROM tayah
+        WHERE SuraID = ? AND AyaID = ?
+        ORDER BY AyaID
+    """
+        var result: Pair<Int, Int>? = null
+        val cursor = db.rawQuery(query, arrayOf(surahId.toString(), ayahId.toString()))
+
+        if (cursor.moveToFirst()) {
+            val retrievedSurahId = cursor.getInt(cursor.getColumnIndexOrThrow("SuraID"))
+            val retrievedAyahNumber = cursor.getInt(cursor.getColumnIndexOrThrow("AyaNo"))
+            result = Pair(retrievedSurahId, retrievedAyahNumber)
+        }
+        cursor.close()
+        return result
+    }
+
     fun getVerseCountForSurahs(): Map<Int, Int> {
         val db = this.readableDatabase
         val query = """
@@ -216,6 +236,22 @@ internal class DbHelper(var mycontext: Context) :
         }
         cursor.close()
         return verseCountMap
+    }
+    fun getRelativeAyahNumber(surahId: Int, ayahId: Int): Int? {
+        val db = this.readableDatabase
+        val query = """
+        SELECT ROW_NUMBER() OVER (PARTITION BY SuraID ORDER BY AyaID) AS RelativeAyahNumber
+        FROM tayah
+        WHERE SuraID = ? AND AyaID = ?
+    """
+        var relativeAyahNumber: Int? = null
+
+        val cursor = db.rawQuery(query, arrayOf(surahId.toString(), ayahId.toString()))
+        if (cursor.moveToFirst()) {
+            relativeAyahNumber = cursor.getInt(cursor.getColumnIndexOrThrow("RelativeAyahNumber"))
+        }
+        cursor.close()
+        return relativeAyahNumber
     }
 
     fun getRandomAyat(): tayah? {
@@ -247,6 +283,6 @@ internal class DbHelper(var mycontext: Context) :
 
 
     companion object {
-        private const val DB_PATH = "/data/data/[YOUR PACKAGE HERE]/databases/"
+        private const val DB_PATH = "/data/data/com.example.islam360/databases/"
     }
 }

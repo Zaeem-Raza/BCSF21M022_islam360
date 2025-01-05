@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
+        android:background="@color/primaryTextColor"
         android:orientation="horizontal"
         android:padding="8dp">
 
@@ -40,6 +41,7 @@
                 android:layout_height="wrap_content"
                 android:text="Al-Fatiha"
                 android:textStyle="bold"
+                android:textColor="@color/green"
                 android:textSize="16sp" />
 
             <TextView
@@ -47,8 +49,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7 Verses"
-                android:textSize="14sp"
-                android:textColor="#808080" />
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <!-- Favorite Button -->

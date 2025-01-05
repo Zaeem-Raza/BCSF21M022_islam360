@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "857934384297",
+    "project_id": "islam360-1e87f",
+    "storage_bucket": "islam360-1e87f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857934384297:android:2f4b0958d22fc423fc2db8",
+        "android_client_info": {
+          "package_name": "com.example.islam360"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ_L8VLfLo6PSixW3mhwBi__akp4VsmCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

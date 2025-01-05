@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyish_black"
+    tools:context=".TasbihActivity">
+
+    <!-- Tasbih Phrase Text -->
+    <TextView
+        android:id="@+id/allahu_akbar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الله أكبر"
+        android:textSize="@dimen/_36ssp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/al_qalam"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_25sdp" />
+
+    <!-- Tasbih Icon -->
+    <ImageView
+        android:id="@+id/ic_tasbeeh"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:src="@drawable/ic_tasbih"
+        android:contentDescription="@string/tasbeeh_icon"
+        app:tint="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/allahu_akbar_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp" />
+
+    <!-- Count Display -->
+    <TextView
+        android:id="@+id/tasbih_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="@dimen/_30ssp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintTop_toBottomOf="@id/ic_tasbeeh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_12sdp" />
+
+    <!-- Buttons for Plus and Reset -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tasbih_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp">
+
+        <!-- Plus Button -->
+        <ImageView
+            android:id="@+id/plus_icon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:src="@drawable/ic_plus"
+            android:contentDescription="@string/plus_icon"
+            app:tint="@android:color/white"
+            android:layout_marginEnd="@dimen/_20sdp" />
+
+        <!-- Reset Button -->
+        <ImageView
+            android:id="@+id/reset_icon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:src="@drawable/ic_reset"
+            android:contentDescription="@string/reset_icon"
+            app:tint="@android:color/white"
+            android:layout_marginStart="@dimen/_20sdp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

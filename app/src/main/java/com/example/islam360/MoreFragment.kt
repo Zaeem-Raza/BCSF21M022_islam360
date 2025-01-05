@@ -1,5 +1,6 @@
 package com.example.islam360
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,7 +25,32 @@ class MoreFragment : Fragment() {
         val iconImageView: ImageView = view.findViewById(R.id.fragment_icon)
         iconImageView.setImageResource(R.drawable.ic_more) // Replace with the actual drawable resource
 
+        // Find the Shahadah card and set a click listener
+        val shahadahCard: View = view.findViewById(R.id.card_shahadah)
+        shahadahCard.setOnClickListener {
+            startActivity(Intent(requireContext(), Shahadah::class.java))
+        }
+
+        // Find the Prayer Time card and set a click listener
+        val prayerCard: View = view.findViewById(R.id.card_prayer_time)
+        prayerCard.setOnClickListener {
+            startActivity(Intent(requireContext(), PrayerTime::class.java))
+        }
+
+        // Find the Qibla Direction card and set a click listener
+        val qiblaCard: View = view.findViewById(R.id.card_qibla_direction)
+        qiblaCard.setOnClickListener {
+            startActivity(Intent(requireContext(), Direction::class.java))
+        }
+
+        // Find the Tasbih card and set a click listener
+        val tasbeehCard: View = view.findViewById(R.id.card_Tasbih)
+        tasbeehCard.setOnClickListener {
+            // Open TasbihActivity using Intent
+            val intent = Intent(requireContext(), TasbihActivity::class.java)
+            startActivity(intent)
+        }
+
         return view
     }
 }
-

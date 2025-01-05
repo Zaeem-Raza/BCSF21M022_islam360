@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,27 +17,53 @@
         android:theme="@style/Theme.Islam360"
         tools:targetApi="31">
         <activity
-            android:name=".Login"
+            android:name=".AyatDetail"
             android:exported="false" />
         <activity
-            android:name=".MoreFragment"
+            android:name=".BySurahActivity"
             android:exported="false" />
         <activity
-            android:name=".IbadatFragment"
+            android:name=".AyatActivity"
             android:exported="false" />
         <activity
-            android:name=".HadithFragment"
+            android:name=".TasbihActivity"
+            android:exported="false" /> <!-- Add the Signup Activity -->
+        <activity
+            android:name=".Signup"
+            android:exported="true"
+            android:theme="@style/Theme.Islam360" />
+        <activity
+            android:name=".QuranNext"
+            android:exported="true"
+            android:theme="@style/Theme.Islam360" />
+        <activity
+            android:name=".Seerat_un_Nabi"
+            android:exported="false"
+            android:theme="@style/Theme.Islam360" />
+        <activity
+            android:name=".surahh"
             android:exported="false" />
         <activity
-            android:name=".QuranFragment"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
+            android:name=".SahihBukhari"
             android:exported="false" />
         <activity
             android:name=".Direction"
             android:exported="false"
             android:theme="@style/Theme.Islam360" />
+        <activity
+            android:name=".PrayerTime"
+            android:exported="false"
+            android:theme="@style/Theme.Islam360" />
+        <activity
+            android:name=".Shahadah"
+            android:exported="false"
+            android:theme="@style/Theme.Islam360" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

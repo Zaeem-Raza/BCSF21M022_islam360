@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyish_black"
+    tools:context=".PrayerTime">
+
+    <!-- Header with Sunrise, Zawal, Sunset Times -->
+    <LinearLayout
+        android:id="@+id/time_info_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/greyish_black"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Sunrise Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/_12sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_sunrise"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunrise"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06:14 am"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_9ssp" />
+        </LinearLayout>
+
+        <!-- Zawal Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zawal"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_10ssp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:37 AM"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_9ssp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Sunset Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_12sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_sunset"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunset"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05:19 pm"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_9ssp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/time_info_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Prayer Cards with IDs for reference in PrayerTime.kt -->
+        <include layout="@layout/prayer_time_card" android:id="@+id/fajr_card"/>
+        <include layout="@layout/prayer_time_card" android:id="@+id/dhuhr_card"/>
+        <include layout="@layout/prayer_time_card" android:id="@+id/asr_card"/>
+        <include layout="@layout/prayer_time_card" android:id="@+id/maghrib_card"/>
+        <include layout="@layout/prayer_time_card" android:id="@+id/isha_card"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

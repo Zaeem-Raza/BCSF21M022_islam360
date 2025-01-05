@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
+import com.example.islam360.dataAccess.DbHelper
 
 class HomeFragment : Fragment() {
+
+    private lateinit var dbHelper: DbHelper
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -16,20 +18,27 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        // Set the title for the fragment
-        val fragmentTitle = view.findViewById<TextView>(R.id.fragment_title)
-        fragmentTitle.text = "Home"
+        // Initialize DbHelper
+        dbHelper = DbHelper(requireContext())
 
-        // Set the fragment icon to Home
-        val fragmentIcon = view.findViewById<ImageView>(R.id.fragment_icon)
-        fragmentIcon.visibility = View.GONE  // No icon for home
+        // Fetch a random Ayat from the database
+        val randomAyat = dbHelper.getRandomAyat()
 
-        // Set prayer times programmatically (optional)
-        val prayerTimeNow = view.findViewById<TextView>(R.id.prayer_time_now)
-        prayerTimeNow.text = "Now: DHUHR"
+        // Find the TextViews for displaying the Ayat and its translation
+        val randomAyatText = view.findViewById<TextView>(R.id.random_ayat_text_secondary)
+        val randomAyatTranslation = view.findViewById<TextView>(R.id.random_ayat_translation_secondary)
+        val ayatReference = view.findViewById<TextView>(R.id.ayat_reference_secondary)
 
-        val upcomingPrayerTime = view.findViewById<TextView>(R.id.prayer_time_upcoming)
-        upcomingPrayerTime.text = "Upcoming: ASR"
+        // Update the TextViews with the Ayat and its translation
+        if (randomAyat != null) {
+            randomAyatText.text = randomAyat.arabicText
+            randomAyatTranslation.text = randomAyat.urduTarajama // Replace with the appropriate translation
+            ayatReference.text = "Surah ${randomAyat.surahId}, Ayah ${randomAyat.ayahId}"
+        } else {
+            randomAyatText.text = "No Ayat found."
+            randomAyatTranslation.text = ""
+            ayatReference.text = ""
+        }
 
         return view
     }

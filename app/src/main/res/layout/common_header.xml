@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Now: DHUHR"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="@dimen/_15ssp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="Upcoming: ASR"
         android:textColor="@android:color/white"
-        android:textSize="14sp"
+        android:textSize="@dimen/_15ssp"
         app:layout_constraintTop_toBottomOf="@id/prayer_time_now"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="Home"
         android:textColor="@android:color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/_18ssp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,8 +46,8 @@
     <!-- Icon Section -->
     <ImageView
         android:id="@+id/fragment_icon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
         android:src="@drawable/ic_home"
         app:layout_constraintEnd_toStartOf="@id/fragment_title"
         app:layout_constraintTop_toTopOf="parent"

@@ -4,24 +4,33 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        // Get FirebaseAuth instance
+        val mAuth = FirebaseAuth.getInstance()
+
+        // Check if a user is logged in
+        val currentUser = mAuth.currentUser
+
+        // Redirect based on authentication status after 3 seconds
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, Direction::class.java)
-            startActivity(intent)
+            if (currentUser != null) {
+                // User is logged in, redirect to HomeActivity (or a similar activity)
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+            } else {
+                // No user logged in, redirect to LoginActivity
+                val intent = Intent(this, Login::class.java)
+                startActivity(intent)
+            }
+            finish() // Ensure MainActivity does not remain in the back stack
         }, 3000)
     }
 }

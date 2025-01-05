@@ -1,0 +1,29 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:background="@color/greyish_black"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/primaryTextColor">
+
+        <!-- Arabic Text -->
+        <TextView
+            android:id="@+id/arabicText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/al_mushaf_quran"
+            android:text="Arabic Text"
+            android:textColor="#4CAF50"
+            android:textSize="18sp"
+            android:paddingBottom="8dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

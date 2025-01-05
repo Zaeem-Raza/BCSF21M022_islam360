@@ -1,0 +1,58 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/greyish_black">
+
+        <!-- Arabic Text -->
+        <TextView
+            android:id="@+id/arabicText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Arabic Text"
+            android:fontFamily="@font/al_mushaf_quran"
+            android:textColor="#4CAF50"
+            android:textSize="18sp"
+            android:paddingBottom="8dp" />
+
+        <!-- Translation Text -->
+        <TextView
+            android:id="@+id/translationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translation Text"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:paddingTop="8dp" />
+
+        <!-- Toggle Translation Button -->
+        <Button
+            android:id="@+id/btnToggleTranslation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Switch to English"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/teal_700"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp" />
+
+        <!-- Play Button -->
+        <ImageButton
+            android:id="@+id/btnPlayAyah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_play_circle_24"
+            android:contentDescription="@string/play_ayah"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

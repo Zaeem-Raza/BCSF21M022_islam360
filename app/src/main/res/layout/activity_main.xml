@@ -11,9 +11,9 @@
     <!-- Logo Image -->
     <ImageView
         android:id="@+id/img"
-        android:layout_width="175dp"
-        android:layout_height="158dp"
-        android:layout_marginTop="140dp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginTop="@dimen/_110sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Namaz,Quran,Qibla Direction,Tasbeeh"
-        android:textSize="18sp"
+        android:textSize="@dimen/_15ssp"
         android:textColor="@android:color/white"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
